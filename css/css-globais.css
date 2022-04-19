@@ -1,0 +1,149 @@
+/* ================== CONFIG GLOBAIS ================== */
+
+:root {
+    --vinho: #730202;
+    --bege: #F4E3DE;
+    --branco: #FFFFFF;
+    --brancoFormulario: #fafafa;
+    --laranja: #D96704;
+    --preto: #151515;
+    --cinza1: #9A9A9A;
+    --cinza2: #C4C4C4;
+    --cinza3: #E1E1E1;
+    --vermelho: #D90404;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--preto);
+}
+
+
+
+
+
+body {
+    background-color: #F4E3DE;
+    min-height: 100vh
+}
+
+
+
+
+
+/*   FORMULARIOS   */
+
+
+
+
+.formulario{
+    background-color: var(--brancoFormulario);
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 30px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.353);
+    padding: 35px;
+}
+.asteristico {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--vermelho);
+}
+
+
+
+
+
+
+
+/* botão principal dos fomularios */
+.botao-principal {
+    display: block;
+    margin: 25px auto 25px auto;
+    width: 250px;
+    height: 42px;
+    border-radius: 300px;
+    font-size: 18px;
+    border: none;
+    background-color: var(--vinho);
+    color: var(--branco);
+    cursor: pointer;
+}
+.botao-principal:hover {
+    transition-duration: 0.2s;
+    background-color: #900505;
+}
+/* botão principal dos fomularios */
+
+
+/* inputs formularios */
+
+.label-campo {
+    
+}
+.input-campo {
+    display: block;
+    width: 325px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: var(--branco);
+    border: 2px solid #e2e2e2;
+    padding: 0 15px 0 15px;
+    margin-top: 5px;
+}
+::placeholder{
+    color: #767575;
+    font-size: 15px;
+}
+
+
+.clique-aqui {
+    color: var(--laranja);
+    font-weight: bold;
+    text-decoration: none;
+}
+.clique-aqui:hover {
+    color: var(--laranja);
+}
+
+.rodape-formulario {
+    display: block;
+    margin: 35px auto 35px auto;
+    color: var(--preto);
+    text-align: center; 
+}
+.rodape-formulario a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/* Linha divisoria */
+.linhaFormulario {
+    background-color: var(--cinza2);
+    height: 1px;
+    border: none;
+    width: 100%;
+    margin: auto;
+}
+/* Linha divisoria */
+
+
+
+
+
+
+
+.titulo {
+    text-align: center;
+    margin: 25px 0 25px 0;
+    font-size: 24px;
+    color: var(--vinho);
+    font-weight: bold;
+}
+
+/* ================== CONFIG GLOBAIS ================== */

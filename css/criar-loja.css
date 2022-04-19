@@ -1,0 +1,44 @@
+#formularioCriarLoja {
+    width: 460px;
+    height: 745px;
+    margin-bottom: 20px;
+}
+
+
+#campo-endereco {
+    display: inline-block;
+    width: 78%;
+}
+#campo-numero {
+    display: inline-block;
+    width: 20%;
+}
+#campo-estado {display: inline-block; width: 43%;}
+#campo-cidade {display: inline-block; width: 55%;}
+#campo-telefone {display: inline-block;}
+
+
+#input-nome, #input-bairro, #input-endereco, #input-numero, #input-estado, #input-cidade, #input-telefone {
+    width: 100%;
+}
+#input-telefone {
+    width: 195px;
+}
+
+::placeholder{
+    color: var(--cinza1);
+    font-size: 16px;
+}
+
+
+
+
+
+#teste {
+    opacity: 100%;
+    background-color: var(--cinza2);
+    height: 1px;
+    border: none;
+    width: 100%;
+    margin: auto;
+}
