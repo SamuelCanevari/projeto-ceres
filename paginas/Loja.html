@@ -15,11 +15,131 @@
   </head>
   <body id="corpo">
 
+    <!-- Modal VER PRODUTO -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <i class="fa-solid fa-circle-info" id="icone-principal"></i>
+                        <h5 class="modal-title" id="staticBackdropLabel" style="margin-left: 5px;">Informações sobre o produto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <img src="imagens/maca.jpg" class="imagem-card" alt="...">
+                        <div style="border: 2px solid var(--cinza2); padding: 15px; border-radius: 10px; margin-top: 15px;">
+                            <h3>Maçã fuji organica</h3>
+                            <div style="background-color: var(--cinza3); padding: 20px;">
+                                <div style="margin-bottom: 20px;">
+                                    <i class="fa-solid fa-caret-right"></i>
+                                    <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Descrição</h5>
+                                    <p class="paragrafo-conteudo-card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,</p>
+                                </div>
+                                <div style="margin-bottom: 20px;">
+                                    <i class="fa-solid fa-caret-right"></i>
+                                    <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Categoria</h5>
+                                    <p class="paragrafo-conteudo-card">Frutas</p>
+                                </div>
+                                <div style="margin-bottom: 20px;">
+                                    <i class="fa-solid fa-caret-right"></i>
+                                    <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Quantidade</h5>
+                                    <p class="paragrafo-conteudo-card">1 kg</p>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-caret-right"></i>
+                                    <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Preço</h5>
+                                    <p class="paragrafo-conteudo-card">R$ 10 por kg</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Modal ADICIONAR PRODUTO -->
+        <div class="modal fade" id="aaaa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <i class="fa-solid fa-circle-plus"></i>
+                        <h5 class="modal-title" id="staticBackdropLabel" style="margin-left: 5px;">Cadastrar produto</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <form action="">
+                        <div class="modal-body">
+
+                            <div class="campo-cadastrar-produto">
+                                <label for="cadastroNomeProduto" class="label-campo">Nome <strong><span class="asteristico">*</span></strong></label>
+                                <input type="text" class="input-campo" id="cadastroNomeProduto" name="cadastroNomeProduto" placeholder="Digite o nome do produto . . ." required>
+                            </div>
+
+                            <div class="campo-cadastrar-produto">
+                                <label for="cadastroCategoriaProduto" class="label-campo">Categoria <strong><span class="asteristico">*</span></strong></label>
+                                <select name="cadastroCategoriaProduto" class="input-campo" id="cadastroCategoriaProduto" required>
+                                    <option value="" selected disabled>Nenhum selecionado</option>
+                                    <option value="1">Frutas</option>
+                                    <option value="2">Verduras</option>
+                                    <option value="3">Legumes</option>
+                                </select>
+                            </div>
+
+                            <div class="campo-cadastrar-produto">
+                                <label for="input-quantidade" class="label-campo" id="label-quantidade">Quantidade <strong><span class="asteristico">*</span></strong></label><br>
+                                <input type="number" class="input-campo" id="cadastroQuantidadeProduto" required>
+                                <select class="input-campo" id="cadastroTipoQuantidadeProduto" name="cadastroTipoQuantidadeProduto" required>
+                                    <option value="" selected disabled>Nenhum selecionado</option>
+                                    <option value="1">kg</option>
+                                    <option value="2">unidades</option>
+                                </select>
+                            </div>
+
+                            <div class="campo-cadastrar-produto">
+                                <label for="input-valor-produto" class="label-campo" id="label-valor-produto">Preço <strong><span class="asteristico">*</span></strong></label><br>
+                                R$ <input type="number" class="input-campo" id="cadastroPrecoProduto" placeholder="00.00" required>
+                            </div>
+
+                            <div class="campo-cadastrar-produto">
+                                <label for="cadastroDescricaoProduto" class="label-campo" id="label-descricao-produto">Descrição <strong><span class="asteristico">*</span></strong></label><br>
+                                <textarea name="cadastroDescricaoProduto" id="cadastroDescricaoProduto" cols="54" rows="3" required></textarea>
+                            </div>
+
+                            <div class="campo-cadastrar-produto">
+                                <label for="input-quantidade" class="label-campo" id="label-quantidade">Foto <strong><span class="asteristico">*</span></strong></label><br>
+                                <input type="file" name="" id="" required>
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-success">Cadastrar</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+        
+
       <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="melancia.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    <img src="imagens/melancia.jpg" alt="" width="60" height="48" class="d-inline-block align-text-top">
                     CERES
                 </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,9 +158,9 @@
                             <a class="nav-link" href="Loja.html">Minha loja</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="Cadastro.html">Cadastrar</a>
+                            <a class="nav-link active" href="Cadastro.html">CADASTRAR</a>
                         </li><li class="nav-item">
-                            <a class="nav-link active" href="Login.html">Logar</a>
+                            <a class="nav-link active" href="Login.html">LOGAR</a>
                         </li>
                     </ul>
                 </div>
@@ -54,7 +174,7 @@
         <div id="container-titulo-loja">
             <div id="linha-vertical1"></div>
             <div id="linha-vertical2"></div>
-            <h1 id="titulo-loja">Nome da loja</h1>
+            <h1 id="titulo-loja">Loja do Sr. José</h1>
         </div>
 
         <div id="sessoes">
@@ -63,28 +183,34 @@
                 <div class="conteudo">
 
                     <div id="div-titulo-sessao">
-                        <i class="fa-solid fa-circle-info fa-2x" id="icone-principal"></i>
+                        <i class="fa-solid fa-align-center fa-2x"></i>
                         <h2 class="titulo-sessao">Informações</h2>
+                    </div>
+                    <div id="adicionar-produto">
+                        <i class="fa-solid fa-pen-to-square" id="icone-adicionar-produto"></i>
+                        Editar
                     </div>
                     
                     <div id="div-conteudo-informacoes">
                         <div class="item-paragrafro">
                             <i class="fa-solid fa-phone fa-1x" style="width: 25px;"></i>
-                            <p class="p-informacao">Contato: <strong>(14) 99438-43243</strong></p>
+                            <p class="p-informacao">(14) 99438-43243</p>
                         </div>
                         <div class="item-paragrafro">
                             <i class="fa-solid fa-location-dot" style="width: 25px;"></i>
-                            <p class="p-informacao">Bairro: <strong>Senador Salgado Filho</strong></p><br>
-                            <p class="p-informacao" style="padding-left: 30px;">Rua: <strong>Av Warner Gomes Fernandes</strong></p><br>
-                            <p class="p-informacao" style="padding-left: 30px;">Número: <strong>20</strong></p><br>
+                            <p class="p-informacao">Bairro: Senador Salgado Filho</p><br>
+                            <p class="p-informacao" style="padding-left: 30px;">Rua: Av Warner Gomes Fernandes</p><br>
+                            <p class="p-informacao" style="padding-left: 30px;">Número: 20</p><br>
                         </div>
                         <div class="item-paragrafro">
                             <i class="fa-solid fa-city" style="width: 25px;"></i>
-                            <p class="p-informacao">Localização: <strong>Marília/São Paulo</strong></p>
+                            <p class="p-informacao">Localização: Marília/São Paulo</p>
                         </div>
                     </div>
                 </div>
             </section>
+
+
 
 
             <section class="quadrado-branco" id="produtos">
@@ -94,77 +220,52 @@
                         <i class="fa-solid fa-basket-shopping fa-2x" id="icone-principal"></i>
                         <h2 class="titulo-sessao">Produtos</h2>
                     </div>
+                    <div id="adicionar-produto" data-bs-toggle="modal" data-bs-target="#aaaa">
+                        <i class="fa-solid fa-plus" id="icone-adicionar-produto"></i>
+                        Adicionar produto
+                    </div>
 
-                    <div class="conteudo-produto">
-
+                    <div class="conteudo-produtos">
+                        
                         <div class="seta"><i class="fa-solid fa-angle-left fa-2x" id="arrow"></i></div>
 
-                        <div class="box-item">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="image is-4by3">
-                                        <img src="maca.jpg" alt="Placeholder image">
-                                    </figure>
-                                </div>
-                                <div class="card-content">
-                                    <div class="media">
-                                        <div class="media-content">
-                                            <p class="title is-5">Maça</p>
-                                            <p class="subtitle is-6">R$ 4,90 / kg</p>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="card" style="width: 11rem;">
+                            <img src="imagens/maca.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Melancia</h5>
+                                <p class="card-text">R$ 5.90/kg</p>
+
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver produto</button>
                             </div>
                         </div>
-                        <div class="box-item">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="image is-4by3">
-                                        <img src="melancia.jpg" alt="Placeholder image">
-                                    </figure>
-                                </div>
-                                <div class="card-content">
-                                    <div class="media">
-                                        <div class="media-content">
-                                            <p class="title is-5">Melancia</p>
-                                            <p class="subtitle is-6">R$ 5,90 / kg</p>
-                                        </div>
-                                    </div>
-                                </div>
+
+                        <div class="card" style="width: 11rem;">
+                            <img src="imagens/melancia.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Melancia</h5>
+                                <p class="card-text">R$ 5.90/kg</p>
+
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver produto</button>
                             </div>
                         </div>
-                        <div class="box-item">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="image is-4by3">
-                                        <img src="pera.jpg" alt="Placeholder image">
-                                    </figure>
-                                </div>
-                                <div class="card-content">
-                                    <div class="media">
-                                        <div class="media-content">
-                                            <p class="title is-5">Pêra</p>
-                                            <p class="subtitle is-6">R$ 4,90 / kg</p>
-                                        </div>
-                                    </div>
-                                </div>
+
+                        <div class="card" style="width: 11rem;">
+                            <img src="imagens/pera.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Melancia</h5>
+                                <p class="card-text">R$ 5.90/kg</p>
+
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver produto</button>
                             </div>
                         </div>
-                        <div class="box-item">
-                            <div class="card">
-                                <div class="card-image">
-                                    <figure class="image is-4by3">
-                                        <img src="uva.webp" alt="Placeholder image">
-                                    </figure>
-                                </div>
-                                <div class="card-content">
-                                    <div class="media">
-                                        <div class="media-content">
-                                            <p class="title is-5">Banana</p>
-                                            <p class="subtitle is-6">R$ 4,90 / kg</p>
-                                        </div>
-                                    </div>
-                                </div>
+
+                        <div class="card" style="width: 11rem;">
+                            <img src="imagens/uva.webp" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Melancia</h5>
+                                <p class="card-text">R$ 5.90/kg</p>
+
+                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver produto</button>
                             </div>
                         </div>
 
@@ -173,6 +274,8 @@
                     </div>
                 </div>
             </section>
+
+
 
 
             <section class="quadrado-branco" id="chat">

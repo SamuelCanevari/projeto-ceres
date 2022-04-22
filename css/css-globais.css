@@ -22,9 +22,6 @@
 }
 
 
-
-
-
 body {
     background-color: #F4E3DE;
     min-height: 100vh
@@ -37,8 +34,6 @@ body {
 /*   FORMULARIOS   */
 
 
-
-
 .formulario{
     background-color: var(--brancoFormulario);
     border-radius: 10px;
@@ -47,17 +42,6 @@ body {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.353);
     padding: 35px;
 }
-.asteristico {
-    font-size: 18px;
-    font-weight: bold;
-    color: var(--vermelho);
-}
-
-
-
-
-
-
 
 /* botão principal dos fomularios */
 .botao-principal {
@@ -78,12 +62,6 @@ body {
 }
 /* botão principal dos fomularios */
 
-
-/* inputs formularios */
-
-.label-campo {
-    
-}
 .input-campo {
     display: block;
     width: 325px;
@@ -98,6 +76,22 @@ body {
     color: #767575;
     font-size: 15px;
 }
+.asteristico {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--vermelho);
+}
+
+
+
+
+
+
+
+
+
+/* inputs formularios */
+
 
 
 .clique-aqui {
@@ -147,3 +141,10 @@ body {
 }
 
 /* ================== CONFIG GLOBAIS ================== */
+
+
+
+.navbar-brand {
+    font-size: 38px;
+    letter-spacing: 2px;
+}

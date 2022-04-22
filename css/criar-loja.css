@@ -7,22 +7,19 @@
 
 #campo-endereco {
     display: inline-block;
-    width: 78%;
+    width: 82%;
 }
 #campo-numero {
     display: inline-block;
-    width: 20%;
+    width: 65px;
 }
 #campo-estado {display: inline-block; width: 43%;}
 #campo-cidade {display: inline-block; width: 55%;}
-#campo-telefone {display: inline-block;}
+#campo-telefone {display: inline-block; }
 
 
 #input-nome, #input-bairro, #input-endereco, #input-numero, #input-estado, #input-cidade, #input-telefone {
     width: 100%;
-}
-#input-telefone {
-    width: 195px;
 }
 
 ::placeholder{
