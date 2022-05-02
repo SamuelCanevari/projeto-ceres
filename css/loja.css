@@ -1,3 +1,38 @@
+#campo-endereco {
+    display: inline-block;
+    width: 82%;
+}
+#campo-numero {
+    display: inline-block;
+    width: 65px;
+}
+#campo-estado {display: inline-block; width: 43%;}
+#campo-cidade {display: inline-block; width: 55%;}
+#campo-telefone {display: inline-block; }
+
+
+#input-nome, #input-bairro, #input-endereco, #input-numero, #input-estado, #input-cidade, #input-telefone {
+    width: 100%;
+}
+
+::placeholder{
+    color: var(--cinza1);
+    font-size: 16px;
+}
+
+
+#cadastroDescricaoProduto {
+    width: 100%;
+    height: auto;
+}
+#cadastroFotoProduto {
+    width: 100%;
+}
+
+
+
+
+
 #container-titulo-loja {
     position: relative;
     width: 470px;
@@ -45,15 +80,22 @@
 }
 #div-titulo-sessao{
     display: inline-block;
-    border-radius: 20px;
     margin-bottom: 10px;
+    /* border: 2px solid var(--vinho); */
+}
+#div-titulo-sessao i {
+    font-size: 2em;
+    color: var(--preto);
 }
 .titulo-sessao {
-    margin-left: 8px;
+    background-color: var(--vinho);
+    padding: 2px 5px 2px 5px;
+    border-radius: 10px;
+    margin: 0 0 0 5px;
     display: inline-block;
-    font-size: 32px;
-    font-weight: 500;
-    color: var(--preto);
+    font-size: 30px;
+    font-weight: 400;
+    color: var(--branco);
 }
 
 
@@ -121,6 +163,7 @@
 }
 .item-paragrafro {
     margin-top: 10px;
+    display: inline-block;
 }
 
 
@@ -128,16 +171,13 @@
 
 
 #produtos { height: 450px; }
-.conteudo-produtos {
-    display: inline-block;
-}
+
 .conteudo {
     position: relative;
-    /* background-color: yellowgreen; */
 }
 #adicionar-produto {
     position: absolute;
-    border: 1px solid var(--preto);
+    border: 1.5px solid var(--preto);
     display: inline-block;
     padding: 3px 10px 3px 10px;
     border-radius: 5px;
@@ -158,37 +198,87 @@
 }
 
 .btn-outline-danger {
-    margin-left: 10px;
 }
 
 
 
 
+.container-itens-scroll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.scroll-horizontal {
+    width: 910px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    
+}
+#cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    left: 0px;
+    transition: 0.5s all ease-out;
+}
 
 .card{
+    position: relative;
     display: inline-block;
-    margin: 0 8px 0 8px;
-}
-.card-body {
+    margin: 0 9px 0 9px;
+    display: flex;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.378);
+    justify-content: center;
+    align-items: center;
 }
 .card-img-top {
     width: 174px;
     height: 140px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+#img1{
+    background-image: url(../paginas/imagens/maca.jpg);
+}
+#img2{
+    background-image: url(../paginas/imagens/melancia.jpg);
+}
+#img3{
+    background-image: url(../paginas/imagens/pera.jpg);
+}
+#img4{
+    background-image: url(../paginas/imagens/uva.webp);
 }
 
 
-.seta {
+
+
+
+
+
+.botao {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.321);
+    background-color: var(--branco);
+    width: 50px;
+    height: 50px;
     border-radius: 100px;
-    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.437);
-    margin-bottom: 80px;
-    cursor: pointer;
-    
+    margin: 0px 5px;
+    z-index: 1;
 }
 #arrow {
+    font-size: 1.5em;
     position: absolute;
     left: 50%;
     top: 50%;

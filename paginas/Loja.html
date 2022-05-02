@@ -4,143 +4,208 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Loja</title>
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="../css/loja.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
     <link rel="stylesheet" href="../css/css-globais.css">
-        
+    <link rel="stylesheet" href="../css/loja.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
     
-    <title>Loja</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    
   </head>
   <body id="corpo">
+      <!-- Modal EDITAR -->
+    <div class="modal fade" id="modalEditarProduto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
-    <!-- Modal VER PRODUTO -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
+                <div class="modal-header">
+                    <i class="bi bi-pencil-square" id="icone-adicionar-produto"></i>
+                    <h5 class="modal-title" id="staticBackdropLabel" style="margin-left: 5px;">Editar informações</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
 
-                    <div class="modal-header">
-                        <i class="fa-solid fa-circle-info" id="icone-principal"></i>
-                        <h5 class="modal-title" id="staticBackdropLabel" style="margin-left: 5px;">Informações sobre o produto</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-
+                <form action="">
                     <div class="modal-body">
-                        <img src="imagens/maca.jpg" class="imagem-card" alt="...">
-                        <div style="border: 2px solid var(--cinza2); padding: 15px; border-radius: 10px; margin-top: 15px;">
-                            <h3>Maçã fuji organica</h3>
-                            <div style="background-color: var(--cinza3); padding: 20px;">
-                                <div style="margin-bottom: 20px;">
-                                    <i class="fa-solid fa-caret-right"></i>
-                                    <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Descrição</h5>
-                                    <p class="paragrafo-conteudo-card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,</p>
-                                </div>
-                                <div style="margin-bottom: 20px;">
-                                    <i class="fa-solid fa-caret-right"></i>
-                                    <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Categoria</h5>
-                                    <p class="paragrafo-conteudo-card">Frutas</p>
-                                </div>
-                                <div style="margin-bottom: 20px;">
-                                    <i class="fa-solid fa-caret-right"></i>
-                                    <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Quantidade</h5>
-                                    <p class="paragrafo-conteudo-card">1 kg</p>
-                                </div>
-                                <div>
-                                    <i class="fa-solid fa-caret-right"></i>
-                                    <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Preço</h5>
-                                    <p class="paragrafo-conteudo-card">R$ 10 por kg</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
+                        <div style="margin-bottom: 15px;" id="campo-loja">
+                            <label for="input-nome" class="label-campo" id="label-nome">Nome da loja <strong><span class="asteristico">*</span></strong></label>
+                            <input type="text" class="input-campo" id="input-nome" placeholder="Digite o novo nome da loja . . ." required>
+                        </div>
+        
+                        <div style="margin-bottom: 15px;" id="campo-bairro">
+                            <label for="input-bairro" class="label-campo" id="label-bairro">Bairro <strong><span class="asteristico">*</span></strong></label>
+                            <input type="text" class="input-campo" id="input-bairro" placeholder="Digite o novo nome do bairro . . ." required>
+                        </div>
+        
+        
+                        <div style="margin-bottom: 15px;" id="campo-endereco">
+                            <label for="input-endereco" class="label-campo" id="label-endereco">Endereço <strong><span class="asteristico">*</span></strong></label><br>
+                            <input type="text" class="input-campo" id="input-endereco" placeholder="Digite o novo nome da rua . . ." required>
+                        </div>
+                        <div style="margin-bottom: 15px;" id="campo-numero">
+                            <label for="input-numero" class="label-campo" id="label-numero">Número</label><br>
+                            <input type="number" class="input-campo" id="input-numero">
+                        </div>
+
+                        <div style="margin-bottom: 15px;" id="campo-estado">
+                            <label for="input-estado" class="label-campo" id="label-estado">Estado <strong><span class="asteristico">*</span></strong></label><br>
+                            <select name="input-estado" class="input-campo" id="input-estado" required>
+                                <option value="nenhum" disabled selected>Nenhum selecionado</option>
+                            </select>
+                        </div>
+                        <div style="margin-bottom: 15px;" id="campo-cidade">
+                            <label for="input-cidade" class="label-campo" id="label-cidade">Cidade <strong><span class="asteristico">*</span></strong></label><br>
+                            <select name="input-cidade" class="input-campo" id="input-cidade" required>
+                                <option value="nenhum" disabled selected>Nenhum selecionado</option>
+                            </select>
+                        </div>
+
+                        <div id="campo-telefone">
+                            <label for="input-telefone" class="label-campo" id="label-telefone">Telefone para contato <strong><span class="asteristico">*</span></strong></label><br>
+                            <input type="number" class="input-campo" id="input-telefone" placeholder="Digite o novo telefone . . ." required>
+                        </div>
+
+                        
+
+                    </div>
                     <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Atualizar</button>
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                     </div>
+                </form>
 
-                </div>
             </div>
         </div>
+    </div>
 
+    <!-- Modal VER PRODUTO -->
+    <div class="modal fade" id="modalVerProduto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
+                <div class="modal-header">
+                    <i class="fa-solid fa-circle-info" id="icone-principal"></i>
+                    <h5 class="modal-title" id="staticBackdropLabel" style="margin-left: 5px;">Informações sobre o produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
 
-        <!-- Modal ADICIONAR PRODUTO -->
-        <div class="modal fade" id="aaaa" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-
-                    <div class="modal-header">
-                        <i class="fa-solid fa-circle-plus"></i>
-                        <h5 class="modal-title" id="staticBackdropLabel" style="margin-left: 5px;">Cadastrar produto</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body">
+                    <img src="imagens/maca.jpg" class="imagem-card" alt="...">
+                    <div style="border: 2px solid var(--cinza2); padding: 15px; border-radius: 10px; margin-top: 15px;">
+                        <h3>Maçã fuji organica</h3>
+                        <div style="background-color: var(--cinza3); padding: 20px;">
+                            <div style="margin-bottom: 20px;">
+                                <i class="fa-solid fa-caret-right"></i>
+                                <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Descrição</h5>
+                                <p class="paragrafo-conteudo-card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,</p>
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <i class="fa-solid fa-caret-right"></i>
+                                <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Categoria</h5>
+                                <p class="paragrafo-conteudo-card">Frutas</p>
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <i class="fa-solid fa-caret-right"></i>
+                                <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Quantidade</h5>
+                                <p class="paragrafo-conteudo-card">1 kg</p>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-caret-right"></i>
+                                <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Preço</h5>
+                                <p class="paragrafo-conteudo-card">R$ 10 por kg</p>
+                            </div>
+                        </div>
                     </div>
-
-                    <form action="">
-                        <div class="modal-body">
-
-                            <div class="campo-cadastrar-produto">
-                                <label for="cadastroNomeProduto" class="label-campo">Nome <strong><span class="asteristico">*</span></strong></label>
-                                <input type="text" class="input-campo" id="cadastroNomeProduto" name="cadastroNomeProduto" placeholder="Digite o nome do produto . . ." required>
-                            </div>
-
-                            <div class="campo-cadastrar-produto">
-                                <label for="cadastroCategoriaProduto" class="label-campo">Categoria <strong><span class="asteristico">*</span></strong></label>
-                                <select name="cadastroCategoriaProduto" class="input-campo" id="cadastroCategoriaProduto" required>
-                                    <option value="" selected disabled>Nenhum selecionado</option>
-                                    <option value="1">Frutas</option>
-                                    <option value="2">Verduras</option>
-                                    <option value="3">Legumes</option>
-                                    <option value="4">Animal</option>
-                                </select>
-                            </div>
-
-                            <div class="campo-cadastrar-produto">
-                                <label for="input-quantidade" class="label-campo" id="label-quantidade">Quantidade <strong><span class="asteristico">*</span></strong></label><br>
-                                <input type="number" class="input-campo" id="cadastroQuantidadeProduto" required>
-                                <select class="input-campo" id="cadastroTipoQuantidadeProduto" name="cadastroTipoQuantidadeProduto" required>
-                                    <option value="" selected disabled>Nenhum selecionado</option>
-                                    <option value="1">kg</option>
-                                    <option value="2">unidades</option>
-                                </select>
-                            </div>
-
-                            <div class="campo-cadastrar-produto">
-                                <label for="input-valor-produto" class="label-campo" id="label-valor-produto">Preço <strong><span class="asteristico">*</span></strong></label><br>
-                                R$ <input type="number" class="input-campo" id="cadastroPrecoProduto" placeholder="00.00" required>
-                            </div>
-
-                            <div class="campo-cadastrar-produto">
-                                <label for="cadastroDescricaoProduto" class="label-campo" id="label-descricao-produto">Descrição <strong><span class="asteristico">*</span></strong></label><br>
-                                <textarea name="cadastroDescricaoProduto" id="cadastroDescricaoProduto" cols="54" rows="3" required></textarea>
-                            </div>
-
-                            <div class="campo-cadastrar-produto">
-                                <label for="input-quantidade" class="label-campo" id="label-quantidade">Foto <strong><span class="asteristico">*</span></strong></label><br>
-                                <input type="file" name="" id="" required>
-                            </div>
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-success">Cadastrar</button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        </div>
-                    </form>
-
                 </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+
             </div>
         </div>
+    </div>
+
+    <!-- Modal ADICIONAR PRODUTO -->
+    <div class="modal fade" id="modalAdicionarProduto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <i class="bi bi-plus-lg" id="icone-adicionar-produto"></i>
+                    <h5 class="modal-title" id="staticBackdropLabel" style="margin-left: 5px;">Adicionar produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <form action="">
+                    <div class="modal-body">
+
+                        <div class="campo-cadastrar-produto">
+                            <label for="cadastroNomeProduto" class="label-campo">Nome <strong><span class="asteristico">*</span></strong></label>
+                            <input type="text" class="input-campo" id="cadastroNomeProduto" name="cadastroNomeProduto" placeholder="Digite o nome do produto . . ." required>
+                        </div>
+
+                        <div class="campo-cadastrar-produto">
+                            <label for="cadastroCategoriaProduto" class="label-campo">Categoria <strong><span class="asteristico">*</span></strong></label>
+                            <select name="cadastroCategoriaProduto" class="input-campo" id="cadastroCategoriaProduto" required>
+                                <option value="" selected disabled>Nenhum selecionado</option>
+                                <option value="1">Frutas</option>
+                                <option value="2">Verduras</option>
+                                <option value="3">Legumes</option>
+                                <option value="4">Animal</option>
+                                <option value="5">Outro</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-cadastrar-produto">
+                            <label for="input-quantidade" class="label-campo" id="label-quantidade">Quantidade <strong><span class="asteristico">*</span></strong></label><br>
+                            <input type="number" class="input-campo" id="cadastroQuantidadeProduto" required>
+                            <select class="input-campo" id="cadastroTipoQuantidadeProduto" name="cadastroTipoQuantidadeProduto" required>
+                                <option value="" selected disabled>Nenhum selecionado</option>
+                                <option value="1">kg</option>
+                                <option value="2">unidades</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-cadastrar-produto">
+                            <label for="input-valor-produto" class="label-campo" id="label-valor-produto">Preço <strong><span class="asteristico">*</span></strong></label><br>
+                            R$ <input type="number" class="input-campo" id="cadastroPrecoProduto" placeholder="00.00" required>
+                        </div>
+
+                        <div class="campo-cadastrar-produto">
+                            <label for="cadastroDescricaoProduto" class="label-campo" id="label-descricao-produto">Descrição <strong><span class="asteristico">*</span></strong></label><br>
+                            <textarea class="input-campo" name="cadastroDescricaoProduto" id="cadastroDescricaoProduto" cols="54" rows="3" placeholder="Informações como estado do produto, dia da coleta, uso de agrotóxicos, etc" required></textarea>
+                        </div>
+
+                        <div class="campo-cadastrar-produto">
+                            <label for="input-quantidade" class="label-campo" id="label-quantidade">Foto <strong><span class="asteristico">*</span></strong></label><br>
+                            <input type="file" accept="image/png,image/jpeg" class="" name="cadastroFotoProduto" id="cadastroFotoProduto" required>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Cadastrar</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
 
 
-
-
-        
-
-      <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-vinho">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="imagens/melancia.jpg" alt="" width="60" height="48" class="d-inline-block align-text-top">
+                    <img src="logo.png" alt="" width="60" height="48" class="d-inline-block align-text-top">
                     CERES
                 </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -158,132 +223,135 @@
                         <li class="nav-item">
                             <a class="nav-link" href="Loja.html">Minha loja</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="Cadastro.html">CADASTRAR</a>
-                        </li><li class="nav-item">
-                            <a class="nav-link active" href="Login.html">LOGAR</a>
-                        </li>
                     </ul>
+                    <div class="d-flex">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="Cadastro.html">CADASTRAR</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="Login.html">LOGAR</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-          </nav>
-      </header>
+        </nav>
+    </header>
 
+    <main>
 
-      <main>
-
-        <div id="container-titulo-loja">
+        <div id="container-titulo-loja"> <!-- titulo loja -->
             <div id="linha-vertical1"></div>
             <div id="linha-vertical2"></div>
-            <h1 id="titulo-loja">Loja do Sr. José</h1>
+            <h1 id="titulo-loja">Loja do Seu Zé</h1>
         </div>
 
-        <div id="sessoes">
+        <div id="sessoes"> <!-- sessoes loja -->
 
-            <section class="quadrado-branco" id="informacoes">
+            <section class="quadrado-branco" id="informacoes"> <!-- section informações -->
                 <div class="conteudo">
 
                     <div id="div-titulo-sessao">
-                        <i class="fa-solid fa-align-center fa-2x"></i>
+                        <i class="bi bi-info-square-fill"></i>
                         <h2 class="titulo-sessao">Informações</h2>
                     </div>
-                    <div id="adicionar-produto">
-                        <i class="fa-solid fa-pen-to-square" id="icone-adicionar-produto"></i>
-                        Editar
+                    <div id="adicionar-produto" data-bs-toggle="modal" data-bs-target="#modalEditarProduto">
+                        <i class="bi bi-pencil-square" id="icone-adicionar-produto"></i> Editar
                     </div>
                     
                     <div id="div-conteudo-informacoes">
-                        <div class="item-paragrafro">
-                            <i class="fa-solid fa-phone fa-1x" style="width: 25px;"></i>
+                        <div class="item-paragrafro" title="Telefone para contato">
+                            <i class="bi bi-telephone-fill"></i>
                             <p class="p-informacao">(14) 99438-43243</p>
-                        </div>
-                        <div class="item-paragrafro">
-                            <i class="fa-solid fa-location-dot" style="width: 25px;"></i>
+                        </div><br>
+                        <div class="item-paragrafro" title="localização da loja">
+                            <i class="bi bi-geo-alt-fill"></i>
                             <p class="p-informacao">Bairro: Senador Salgado Filho</p><br>
-                            <p class="p-informacao" style="padding-left: 30px;">Rua: Av Warner Gomes Fernandes</p><br>
-                            <p class="p-informacao" style="padding-left: 30px;">Número: 20</p><br>
-                        </div>
-                        <div class="item-paragrafro">
-                            <i class="fa-solid fa-city" style="width: 25px;"></i>
+                            <p class="p-informacao" style="margin-left: 20.5px;">Rua: Av Warner Gomes Fernandes</p><br>
+                            <p class="p-informacao" style="margin-left: 20.5px;">Número: 20</p><br>
+                        </div><br>
+                        <div class="item-paragrafro" title="Cidade/Estado">
+                            <i class="bi bi-house-fill"></i>
                             <p class="p-informacao">Localização: Marília/São Paulo</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-
-
-
-            <section class="quadrado-branco" id="produtos">
+            <section class="quadrado-branco" id="produtos"> <!-- section produtos -->
                 <div class="conteudo">
 
                     <div id="div-titulo-sessao">
-                        <i class="fa-solid fa-basket-shopping fa-2x" id="icone-principal"></i>
+                        <i class="bi bi-basket3-fill"></i>
                         <h2 class="titulo-sessao">Produtos</h2>
                     </div>
-                    <div id="adicionar-produto" data-bs-toggle="modal" data-bs-target="#aaaa">
-                        <i class="fa-solid fa-plus" id="icone-adicionar-produto"></i>
-                        Adicionar produto
+                    <div id="adicionar-produto" data-bs-toggle="modal" data-bs-target="#modalAdicionarProduto">
+                        <i class="bi bi-plus-lg" id="icone-adicionar-produto"></i> Adicionar
                     </div>
 
-                    <div class="conteudo-produtos">
-                        
-                        <div class="seta"><i class="fa-solid fa-angle-left fa-2x" id="arrow"></i></div>
-
-                        <div class="card" style="width: 11rem;">
-                            <img src="imagens/maca.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Melancia</h5>
-                                <p class="card-text">R$ 5.90/kg</p>
-
-                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver produto</button>
+                    <div class="container-itens-scroll">
+                        <div class="scroll-horizontal">
+                            <button class="botao" id="botaoEsquerdo" onclick="scrollHorizontal(1)"><i class="bi bi-chevron-left" id="arrow"></i></button>
+                            <button class="botao" id="botaoDireito" onclick="scrollHorizontal(-1)"><i class="bi bi-chevron-right" id="arrow"></i></button>
+                            <div id="cards-container">
+                                <div class="card" style="width: 11rem;">
+                                    <div class="card-img-top" id="img1"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Maça</h5>
+                                        <p class="card-text">10 unidades</p>
+                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal" data-bs-target="#modalVerProduto">Ver produto</button>
+                                    </div>
+                                </div>
+                                <div class="card" style="width: 11rem;">
+                                    <div class="card-img-top" id="img2"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Melancia</h5>
+                                        <p class="card-text">3 unidades</p>
+                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal" data-bs-target="#modalVerProduto">Ver produto</button>                                    </div>
+                                </div>
+                                <div class="card" style="width: 11rem;">
+                                    <div class="card-img-top" id="img3"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pera</h5>
+                                        <p class="card-text">R$ 6,13/kg</p>
+                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal" data-bs-target="#modalVerProduto">Ver produto</button>                                    </div>
+                                </div>
+                                <div class="card" style="width: 11rem;">
+                                    <div class="card-img-top" id="img4"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Uva</h5>
+                                        <p class="card-text">R$ 7,73/kg</p>
+                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal" data-bs-target="#modalVerProduto">Ver produto</button>                                    </div>
+                                </div>
+                                <div class="card" style="width: 11rem;">
+                                    <div class="card-img-top" id="img4"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Uva</h5>
+                                        <p class="card-text">R$ 7,73/kg</p>
+                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal" data-bs-target="#modalVerProduto">Ver produto</button>                                    </div>
+                                </div>
+                                <div class="card" style="width: 11rem;">
+                                    <div class="card-img-top" id="img4"></div>
+                                    <div class="card-body">
+                                        <h5 class="card-title">Uva</h5>
+                                        <p class="card-text">R$ 7,73/kg</p>
+                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal" data-bs-target="#modalVerProduto">Ver produto</button>                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
-
-                        <div class="card" style="width: 11rem;">
-                            <img src="imagens/melancia.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Melancia</h5>
-                                <p class="card-text">R$ 5.90/kg</p>
-
-                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver produto</button>
-                            </div>
-                        </div>
-
-                        <div class="card" style="width: 11rem;">
-                            <img src="imagens/pera.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Melancia</h5>
-                                <p class="card-text">R$ 5.90/kg</p>
-
-                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver produto</button>
-                            </div>
-                        </div>
-
-                        <div class="card" style="width: 11rem;">
-                            <img src="imagens/uva.webp" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Melancia</h5>
-                                <p class="card-text">R$ 5.90/kg</p>
-
-                                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Ver produto</button>
-                            </div>
-                        </div>
-
-                        <div class="seta"><i class="fa-solid fa-angle-right fa-2x" id="arrow"></i></div>
 
                     </div>
                 </div>
             </section>
 
-
-
-
-            <section class="quadrado-branco" id="chat">
+            <section class="quadrado-branco" id="chat"> <!-- section chat -->
                 <div class="conteudo">
 
                     <div id="div-titulo-sessao">
-                        <i class="fa-solid fa-comments fa-2x" id="icone-principal"></i>
+                        <i class="bi bi-chat-left-text-fill"></i>
+                        <!-- <i class="fa-solid fa-comments fa-2x" id="icone-principal"></i> -->
                         <h2 class="titulo-sessao">Chat</h2>
                     </div>
                 </div>
@@ -292,10 +360,9 @@
 
         </div>
 
+    </main>
 
-      </main>
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-      <script src="https://kit.fontawesome.com/cf31980ead.js" crossorigin="anonymous"></script>
+      <script src="../js/loja.js"></script>
+      <script src="../js/criar-loja.js"></script>
   </body>
 </html>
