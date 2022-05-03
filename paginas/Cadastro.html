@@ -5,23 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     
     <link rel="stylesheet" href="../css/login-cadastro.css">
-    <link rel="stylesheet" href="../css/css-globais.css">
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/css-globais.css">    
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
 
     <title>Cadastro</title>
 </head>
 <body>
 
-    <!-- <header>
+    <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-vinho">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -57,44 +56,43 @@
                 </div>
             </div>
         </nav>
-    </header> -->
+    </header>
 
-    <form class="formulario" id="formularioCadastro">
+    <main>
+        <form class="formulario" id="formularioCadastro">
+            <img src="logo.png" style="width: 160px; height: 160px; display: block; margin: auto;" alt="">
 
-        <img src="logo.png" style="width: 160px; height: 160px; display: block; margin: auto;" alt="">
+            <hr class="linhaFormulario">
 
-        <hr class="linhaFormulario">
-        <div id="conteudo">
-
-            <h1 class="titulo">Crie sua conta</h1>
-
-            <div style="margin-bottom: 15px;">
-                <label for="cadastroNome" class="label-campo">Nome <strong><span class="asteristico">*</span></strong></label>
-                <input type="text" class="input-campo" id="cadastroNome" name="cadastroNome" placeholder="Digite seu nome . . ." required>
-            </div>
-            <div style="margin-bottom: 15px;">
-                <label for="cadastroEmail" class="label-campo">E-mail <strong><span class="asteristico">*</span></strong></label>
-                <input type="email" class="input-campo" id="cadastroEmail" name="cadastroEmail" placeholder="Digite seu email . . ." required>
-            </div>
-            <div style="margin-bottom: 15px;"> 
-                <label for="cadastroSenha" class="label-campo">Senha <strong><span class="asteristico">*</span></strong></label>
-                <input type="password" class="input-campo" id="cadastroSenha" name="cadastroSenha" placeholder="Digite sua senha . . ." required>
-            </div>
-            <div>
-                <label for="cadastroSenhaConfirma" class="label-campo">Confimação de senha <strong><span class="asteristico">*</span></strong></label>
-                <input type="password" class="input-campo" id="cadastroSenhaConfirma" name="cadastroSenhaConfirma" placeholder="Digite sua senha novamente . . ." required>
-            </div>
-            
-            <button type="submit" class="botao-principal">Cadastrar</button>
-
-        </div>
-
-        <hr class="linhaFormulario">
+            <div id="conteudo">
+                <h1 class="titulo">Crie sua conta</h1>
+                <div style="margin-bottom: 15px;">
+                    <label for="cadastroNome" class="label-campo">Nome <strong><span class="asteristico">*</span></strong></label>
+                    <input type="text" class="input-campo" id="cadastroNome" name="cadastroNome" placeholder="Digite seu nome . . ." required>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label for="cadastroEmail" class="label-campo">E-mail <strong><span class="asteristico">*</span></strong></label>
+                    <input type="email" class="input-campo" id="cadastroEmail" name="cadastroEmail" placeholder="Digite seu email . . ." required>
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <label for="cadastroSenha" class="label-campo">Senha <strong><span class="asteristico">*</span></strong></label>
+                    <input type="password" class="input-campo" id="cadastroSenha" name="cadastroSenha" placeholder="Digite sua senha . . ." required>
+                </div>
+                <div>
+                    <label for="cadastroSenhaConfirma" class="label-campo">Confimação de senha <strong><span class="asteristico">*</span></strong></label>
+                    <input type="password" class="input-campo" id="cadastroSenhaConfirma" name="cadastroSenhaConfirma" placeholder="Digite sua senha novamente . . ." required>
+                </div>
         
-        <div class="rodape-formulario">
-            <p>Já possui uma conta? <a href="Login.html" class="clique-aqui">Entre aqui</a></p>
-        </div>
-    </form>
+                <button type="submit" class="botao-principal">Cadastrar</button>
+            </div>
+            <hr class="linhaFormulario">
+        
+            <div class="rodape-formulario">
+                <p>Já possui uma conta? <a href="Login.html" class="clique-aqui">Entre aqui</a></p>
+            </div>
+        </form>
+    </main>
+
     <script src="login-cadastro.js"></script>
 </body>
 </html>

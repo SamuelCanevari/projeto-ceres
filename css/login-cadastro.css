@@ -1,11 +1,12 @@
 #formularioLogin {
-    width: 355px;
-    height: 575px;
+    width: 395px;
+    height: 635px;
+    margin-bottom: 30px;
 }
 #formularioCadastro {
-    width: 355px;
-    height: 770px;
-    margin-bottom: 30px;
+    width: 395px;
+    height: 820px;
+    margin-bottom: 20px;
 }
 
 
