@@ -94,7 +94,7 @@ body {
 
 .input-campo {
     display: block;
-    width: 100%;
+    width: 325px;
     height: 45px;
     border-radius: 10px;
     background-color: var(--branco);
@@ -148,12 +148,11 @@ body {
 
 /* Linha divisoria */
 .linhaFormulario {
-    background-color: var(--cinza2) !important;
-    opacity: 1 !important;
-    height: 2px !important; 
-    border: none !important;
-    width: 100% !important;
-    margin: auto !important;
+    background-color: var(--cinza2);
+    height: 1px;
+    border: none;
+    width: 100%;
+    margin: auto;
 }
 /* Linha divisoria */
 

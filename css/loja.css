@@ -42,7 +42,7 @@
     border-bottom:none;
     border-top: none;
     margin: 80px auto 0 auto;
-    box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.297);
+    /* box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.297); */
     border-radius: 0 0 5px 5px;
 }
 #linha-vertical1, #linha-vertical2 {
@@ -88,15 +88,14 @@
     color: var(--preto);
 }
 .titulo-sessao {
-    /* background-color: var(--vinho); */
+    background-color: var(--vinho);
     padding: 2px 5px 2px 5px;
-    /* border-radius: 8px; */
+    border-radius: 10px;
     margin: 0 0 0 5px;
     display: inline-block;
     font-size: 30px;
     font-weight: 400;
-    color: var(--preto);
-    border-bottom: 3px solid var(--vinho);
+    color: var(--branco);
 }
 
 
@@ -160,8 +159,7 @@
 .p-informacao {
     display: inline-block;
     font-size: 16px;
-    margin-bottom: 3px;
-    margin-left: 5px;
+    margin-bottom: 2px;
 }
 .item-paragrafro {
     margin-top: 10px;
@@ -179,7 +177,7 @@
 }
 #adicionar-produto {
     position: absolute;
-    border: 1px solid var(--preto);
+    border: 1.5px solid var(--preto);
     display: inline-block;
     padding: 3px 10px 3px 10px;
     border-radius: 5px;

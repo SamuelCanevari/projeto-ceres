@@ -1,6 +1,6 @@
 #formularioCriarLoja {
     width: 460px;
-    height: 750px;
+    height: 745px;
     margin-bottom: 20px;
 }
 
@@ -28,3 +28,14 @@
 }
 
 
+
+
+
+#teste {
+    opacity: 100%;
+    background-color: var(--cinza2);
+    height: 1px;
+    border: none;
+    width: 100%;
+    margin: auto;
+}
