@@ -41,7 +41,7 @@ estado.addEventListener('change', async function(){
 
     var arrayCidadesOrdenadas = arrayCidades.sort();
     cidade.innerHTML = ""
-    cidade.innerHTML = "<option value='nenhum' disabled selected>Nenhum selecionado</option>"
+    cidade.innerHTML = "<option value='' disabled selected>- Selecione -</option>"
 
     arrayCidadesOrdenadas.forEach(function(cidade){
         options.innerHTML += "<option>"+cidade+"</option>"
