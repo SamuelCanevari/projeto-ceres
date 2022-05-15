@@ -14,6 +14,11 @@
 #input-nome, #input-bairro, #input-endereco, #input-numero, #input-estado, #input-cidade, #input-telefone {
     width: 100%;
 }
+#input-numero::-webkit-outer-spin-button,
+#input-numero::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 ::placeholder{
     color: var(--cinza1);
@@ -22,6 +27,7 @@
 
 
 #cadastroDescricaoProduto {
+    padding-top: 10px;
     width: 100%;
     height: auto;
 }
@@ -50,7 +56,7 @@
     border-right: 3px solid var(--preto);
     position: absolute;
     bottom: 100%;
-    left: -3.1px;
+    left: -3px;
 }
 #linha-vertical2 { left: 464px}
 #titulo-loja {
@@ -80,7 +86,6 @@
 }
 #div-titulo-sessao{
     display: inline-block;
-    margin-bottom: 10px;
     /* border: 2px solid var(--vinho); */
 }
 #div-titulo-sessao i {
@@ -155,7 +160,7 @@
 
 
 #div-conteudo-informacoes {
-    margin: 0px 0 0 45px;
+    margin: 15px 0 0 45px;
 }
 .p-informacao {
     display: inline-block;

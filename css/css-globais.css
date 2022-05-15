@@ -47,6 +47,22 @@ body {
     color: var(--branco) !important;
 }
 
+#botaoNavBar {
+    background-color: white;
+    color: var(--vinho);
+    font-weight: bold;
+    border: 2px solid var(--vinho);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 3px 10px 3px 0;
+}
+#botaoNavBar:hover {
+    background-color: var(--vinho);
+    color:  white;
+    border: 2px solid white;
+}
+
 
 
 

@@ -35,22 +35,22 @@
 
                         <div style="margin-bottom: 15px;" id="campo-loja">
                             <label for="input-nome" class="label-campo" id="label-nome">Nome da loja <strong><span class="asteristico">*</span></strong></label>
-                            <input type="text" class="input-campo" id="input-nome" placeholder="Digite o novo nome da loja . . ." required>
+                            <input type="text" class="input-campo" id="input-nome" placeholder="Digite o novo nome da loja . . ." value="Loja do Seu Zé" required>
                         </div>
         
                         <div style="margin-bottom: 15px;" id="campo-bairro">
                             <label for="input-bairro" class="label-campo" id="label-bairro">Bairro <strong><span class="asteristico">*</span></strong></label>
-                            <input type="text" class="input-campo" id="input-bairro" placeholder="Digite o novo bairro . . ." required>
+                            <input type="text" class="input-campo" id="input-bairro" placeholder="Digite o novo bairro . . ." value="Senador Salgado Filho" required>
                         </div>
         
         
                         <div style="margin-bottom: 15px;" id="campo-endereco">
                             <label for="input-endereco" class="label-campo" id="label-endereco">Endereço <strong><span class="asteristico">*</span></strong></label><br>
-                            <input type="text" class="input-campo" id="input-endereco" placeholder="Digite a nova rua . . ." required>
+                            <input type="text" class="input-campo" id="input-endereco" placeholder="Digite a nova rua . . ." value="Av Warner Gomes Fernandes" required>
                         </div>
                         <div style="margin-bottom: 15px;" id="campo-numero">
                             <label for="input-numero" class="label-campo" id="label-numero">Número</label><br>
-                            <input type="number" class="input-campo" id="input-numero">
+                            <input type="number" class="input-campo" id="input-numero" value="20">
                         </div>
 
                         <div style="margin-bottom: 15px;" id="campo-estado">
@@ -68,7 +68,7 @@
 
                         <div id="campo-telefone">
                             <label for="input-telefone" class="label-campo" id="label-telefone">Telefone para contato <strong><span class="asteristico">*</span></strong></label><br>
-                            <input type="number" class="input-campo" id="input-telefone" placeholder="Digite o novo telefone . . ." required>
+                            <input type="number" class="input-campo" id="input-telefone" placeholder="Digite o novo telefone . . ." value="14994384324" required>
                         </div>
 
                         
@@ -83,7 +83,6 @@
             </div>
         </div>
     </div>
-
     <!-- Modal VER PRODUTO -->
     <div class="modal fade" id="modalVerProduto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -131,7 +130,6 @@
             </div>
         </div>
     </div>
-
     <!-- Modal ADICIONAR PRODUTO -->
     <div class="modal fade" id="modalAdicionarProduto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -154,11 +152,11 @@
                         <div class="campo-cadastrar-produto">
                             <label for="cadastroCategoriaProduto" class="label-campo">Categoria <strong><span class="asteristico">*</span></strong></label>
                             <select name="cadastroCategoriaProduto" class="input-campo" id="cadastroCategoriaProduto" required>
-                                <option value="" selected disabled>Nenhum selecionado</option>
+                                <option value="" selected disabled>- Selecione -</option>
                                 <option value="1">Frutas</option>
                                 <option value="2">Verduras</option>
                                 <option value="3">Legumes</option>
-                                <option value="4">Animal</option>
+                                <option value="4">Origem animal</option>
                                 <option value="5">Outro</option>
                             </select>
                         </div>
@@ -168,19 +166,21 @@
                             <input type="number" class="input-campo" id="cadastroQuantidadeProduto" required>
                             <select class="input-campo" id="cadastroTipoQuantidadeProduto" name="cadastroTipoQuantidadeProduto" required>
                                 <option value="" selected disabled>Nenhum selecionado</option>
-                                <option value="1">kg</option>
-                                <option value="2">unidades</option>
+                                <option value="1">Kg</option>
+                                <option value="2">Gramas</option>
+                                <option value="3">Unidades</option>
+                                <option value="4">Litros</option>
                             </select>
                         </div>
 
                         <div class="campo-cadastrar-produto">
-                            <label for="input-valor-produto" class="label-campo" id="label-valor-produto">Preço <strong><span class="asteristico">*</span></strong></label><br>
+                            <label for="input-valor-produto" class="label-campo" id="label-valor-produto">Preço total <strong><span class="asteristico">*</span></strong></label><br>
                             R$ <input type="number" class="input-campo" id="cadastroPrecoProduto" placeholder="00.00" required>
                         </div>
 
                         <div class="campo-cadastrar-produto">
                             <label for="cadastroDescricaoProduto" class="label-campo" id="label-descricao-produto">Descrição <strong><span class="asteristico">*</span></strong></label><br>
-                            <textarea class="input-campo" name="cadastroDescricaoProduto" id="cadastroDescricaoProduto" cols="54" rows="3" placeholder="Informações como estado do produto, dia da coleta, uso de agrotóxicos, etc" required></textarea>
+                            <textarea class="input-campo" name="cadastroDescricaoProduto" id="cadastroDescricaoProduto" cols="54" rows="3" placeholder="Informações como estado do produto, dia da coleta, uso de agrotóxicos, etc" maxlength="150" required></textarea>
                         </div>
 
                         <div class="campo-cadastrar-produto">
@@ -198,7 +198,6 @@
             </div>
         </div>
     </div>
-
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-vinho">
@@ -226,10 +225,10 @@
                     <div class="d-flex">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" href="Cadastro.html">CADASTRAR</a>
+                                <a class="nav-link active" id="botaoNavBar" href="Cadastro.html">CADASTRAR</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="Login.html">LOGAR</a>
+                                <a class="nav-link active" id="botaoNavBar" href="Login.html">LOGAR</a>
                             </li>
                         </ul>
                     </div>
@@ -253,7 +252,7 @@
 
                     <div id="div-titulo-sessao">
                         <i class="bi bi-info-square-fill"></i>
-                        <h2 class="titulo-sessao">Informações</h2>
+                        <h2 class="titulo-sessao">INFORMAÇÕES</h2>
                     </div>
                     <div id="adicionar-produto" data-bs-toggle="modal" data-bs-target="#modalEditarProduto">
                         <i class="bi bi-pencil-square" id="icone-adicionar-produto"></i> Editar
@@ -283,7 +282,7 @@
 
                     <div id="div-titulo-sessao">
                         <i class="bi bi-basket3-fill"></i>
-                        <h2 class="titulo-sessao">Produtos</h2>
+                        <h2 class="titulo-sessao">PRODUTOS</h2>
                     </div>
                     <div id="adicionar-produto" data-bs-toggle="modal" data-bs-target="#modalAdicionarProduto">
                         <i class="bi bi-plus-lg" id="icone-adicionar-produto"></i> Adicionar
@@ -357,7 +356,7 @@
                     <div id="div-titulo-sessao">
                         <i class="bi bi-chat-left-text-fill"></i>
                         <!-- <i class="fa-solid fa-comments fa-2x" id="icone-principal"></i> -->
-                        <h2 class="titulo-sessao">Chat</h2>
+                        <h2 class="titulo-sessao">CHAT</h2>
                     </div>
                 </div>
             </section>

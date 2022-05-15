@@ -21,6 +21,11 @@
 #input-nome, #input-bairro, #input-endereco, #input-numero, #input-estado, #input-cidade, #input-telefone {
     width: 100%;
 }
+#input-numero::-webkit-outer-spin-button,
+#input-numero::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 ::placeholder{
     color: var(--cinza1);
