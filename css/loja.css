@@ -74,13 +74,12 @@
 #sessoes { margin-top: 120px; }
 
 .quadrado-branco {
-    position: relative;
-    width: 1000px;
+    background-color: var(--branco);
+    max-width: 1000px;
     height: 290px;
     padding: 30px 40px 30px 40px;
     margin: auto;
     margin-bottom: 30px;
-    background-color: var(--branco);
     border-radius: 10px;
     box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.342);
 }
@@ -99,7 +98,7 @@
     margin: 0 0 0 5px;
     display: inline-block;
     font-size: 32px;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--preto);
     border-bottom: 3px solid var(--vinho);
 }
@@ -160,7 +159,7 @@
 
 
 #div-conteudo-informacoes {
-    margin: 15px 0 0 45px;
+    margin: 15px 0 0 30px;
 }
 .p-informacao {
     display: inline-block;
@@ -177,7 +176,8 @@
 
 
 
-#produtos { height: 450px; }
+#produtos { height: 500px; }
+#chat { height: 800px; max-width: 700px;}
 
 .conteudo {
     position: relative;
@@ -236,8 +236,27 @@
     left: 0px;
     transition: 0.5s all ease-out;
 }
-
+#icone-deletar-produto {
+    font-size: 1.3em;
+    cursor: pointer;
+    background-color: var(--branco);
+    color: red;
+    padding: 8px 13px;
+    border-radius: 100px;
+}
+.card-body {
+    padding: 10px 0 16px 0;
+}
+.card-title {
+    width: 160px;
+    text-align: center;
+}
+.card-text {
+    text-align: center;
+}
 .card{
+    max-width: 174px;
+    max-height: 300px;
     position: relative;
     display: inline-block;
     margin: 0 9px 0 9px;

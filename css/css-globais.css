@@ -31,6 +31,7 @@ body {
 .btn-laranja {
     background-color: var(--laranja);
     color: white;
+    margin-left: 19px;
 }
 .btn-laranja:hover {
     background-color: #c75d00;
