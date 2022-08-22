@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,40 +8,53 @@
 
     <title>Home</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../css/css-globais.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
 
 </head>
+
 <body>
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-vinho">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="logo.png" alt="" width="60" height="48" class="d-inline-block align-text-top">
-                    CERES
+
+                <a class="navbar-brand" href="Home.html">
+                    <img src="img/logo.png" alt="" width="60" height="48" class="d-inline-block align-text-top">CERES
                 </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+                            <a class="nav-link" aria-current="page" href="Home.html" title="Ir à Home">
+                                <i class="bi bi-house-door-fill icone-navbar"></i>Home
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Criar-loja.html">Criar loja</a>
+                            <a class="nav-link" href="Criar-loja.html" title="Ir à Criar loja">
+                                <i class="bi bi-bag-plus-fill icone-navbar"></i>Criar loja
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Loja.html">Minha loja</a>
+                            <a class="nav-link" href="Loja.html" title="Ir à Minha loja">
+                                <i class="bi bi-cart-fill icone-navbar"></i>Minha loja
+                            </a>
                         </li>
                     </ul>
-                    <div class="d-flex">
+
+                    <!-- SEM CONTA LOGADA -->
+                    <!-- <div class="d-flex">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link active" id="botaoNavBar" href="Cadastro.html">CADASTRAR</a>
@@ -49,11 +63,24 @@
                                 <a class="nav-link active" id="botaoNavBar" href="Login.html">LOGAR</a>
                             </li>
                         </ul>
+                    </div> -->
+
+                    <!-- COM CONTA LOGADA -->
+                    <div class="d-flex">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="" id="" href="Meu-perfil.html" title="Meu perfil">
+                                    <i class="bi bi-person-circle" id="minha-conta"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+
             </div>
         </nav>
     </header>
+
 
     <main>
 
@@ -78,7 +105,7 @@
                     </div>
 
                 </div>
-    
+
                 <button class="carousel-control-prev" type="button" data-bs-target="#slider" data-bs-slide="prev">
                     <i class="bi bi-chevron-compact-left"></i>
                     <span class="visually-hidden">Previous</span>
@@ -96,17 +123,19 @@
             <hr class="mt-3" style="margin-bottom: 32px;">
             <div class="row">
 
-                <div class="col-12 col-md-5">   <!-- BARRA DE PESQUISA INICIO -->
+                <div class="col-12 col-md-5">
+                    <!-- BARRA DE PESQUISA INICIO -->
                     <form class="justify-content-center justify-content-md-start mb-3 mb-mb-0">
                         <div class="input-group input-group-sm">
-                            <input class="form-control me-3" type="search" placeholder="Digite aqui para buscar o nome da loja"
-                                aria-label="Search">
+                            <input class="form-control me-3" type="search"
+                                placeholder="Digite aqui para buscar o nome da loja" aria-label="Search">
                             <button class="btn btn-danger" type="submit">Buscar</button>
                         </div>
                     </form>
                 </div>
 
-                <div class="col-12 col-md-7"><!-- ORDENAÇÃO INICIO -->
+                <div class="col-12 col-md-7">
+                    <!-- ORDENAÇÃO INICIO -->
                     <div class="d-flex flex-row-reverse justify-content-center justify-content-md-start">
                         <form class="ml-3 d-inline-block ">
                             <select class="form-select form-select-sm">
@@ -120,7 +149,8 @@
 
             <hr class="mt-3">
 
-            <div class="row"><!-- INICIA AS LOJAS -->
+            <div class="row">
+                <!-- INICIA AS LOJAS -->
 
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 d-flex align-items-stretch pb-3">
                     <div class="card text-center bg-light" style="box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3)">
@@ -208,15 +238,16 @@
                 </div>
 
 
-                
+
 
             </div>
 
             <hr class="mt-3">
 
             <div class="row pb-4">
-                <div class="col-12"><!-- ORDENAÇÃO INICIO -->
-                    <div class="d-flex flex-row-reverse justify-content-center justify-content-md-start">    
+                <div class="col-12">
+                    <!-- ORDENAÇÃO INICIO -->
+                    <div class="d-flex flex-row-reverse justify-content-center justify-content-md-start">
                         <nav class="d-inline-block">
                             <ul class="pagination pagination-sm my-0">
                                 <li class="page-item"><button class="page-link">1</button></li>
@@ -235,6 +266,9 @@
         </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

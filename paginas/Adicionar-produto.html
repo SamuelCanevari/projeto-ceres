@@ -13,12 +13,13 @@
 
     <link rel="stylesheet" href="../css/criar-loja.css">
     <link rel="stylesheet" href="../css/css-globais.css">
+    <link rel="stylesheet" href="../css/loja.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
         rel="stylesheet" />
 
-    <title>Criar Loja</title>
+    <title>Adicionar produto</title>
 </head>
 
 <body id="corpo">
@@ -83,65 +84,72 @@
         </nav>
     </header>
 
-
     <main>
         <form action="" class="formulario" id="formularioCriarLoja" name="formulario">
             <div id="conteudo">
-                <h1 class="titulo">Crie sua loja</h1>
 
+                <h1 class="titulo">Adicionar produto</h1>
 
                 <div style="margin-bottom: 15px;" id="campo-loja">
-                    <label for="input-nome" class="label-campo" id="label-nome">Nome da loja <strong><span
+                    <label for="input-nome" class="label-campo" id="label-nome">Nome do produto <strong><span
                                 class="asteristico">*</span></strong></label>
-                    <input type="text" class="input-campo" id="input-nome" placeholder="Digite o nome de sua loja . . ."
-                        required>
+                    <input type="text" class="input-campo" id="cadastroNomeProduto" name="cadastroNomeProduto"
+                        placeholder="Digite o nome do produto . . ." required>
                 </div>
 
-
-                <div style="margin-bottom: 15px;" id="campo-bairro">
-                    <label for="input-bairro" class="label-campo" id="label-bairro">Bairro <strong><span
+                <div class="campo-cadastrar-produto">
+                    <label for="cadastroCategoriaProduto" class="label-campo">Categoria <strong><span
                                 class="asteristico">*</span></strong></label>
-                    <input type="text" class="input-campo" id="input-bairro" placeholder="Digite seu bairro . . ."
-                        required>
-                </div>
-
-
-                <div style="margin-bottom: 15px;" id="campo-endereco">
-                    <label for="input-endereco" class="label-campo" id="label-endereco">Endereço <strong><span
-                                class="asteristico">*</span></strong></label><br>
-                    <input type="text" class="input-campo" id="input-endereco" placeholder="Digite sua rua . . ."
-                        required>
-                </div>
-                <div style="margin-bottom: 15px;" id="campo-numero">
-                    <label for="input-numero" class="label-campo" id="label-numero">Número</label><br>
-                    <input type="number" class="input-campo" id="input-numero">
-                </div>
-
-
-                <div style="margin-bottom: 15px;" id="campo-estado">
-                    <label for="input-estado" class="label-campo" id="label-estado">Estado <strong><span
-                                class="asteristico">*</span></strong></label><br>
-                    <select name="input-estado" class="input-campo" id="input-estado" required>
-                        <option value="" disabled selected>- Selecione -</option>
-                    </select>
-                </div>
-                <div style="margin-bottom: 15px;" id="campo-cidade">
-                    <label for="input-cidade" class="label-campo" id="label-cidade">Cidade <strong><span
-                                class="asteristico">*</span></strong></label><br>
-                    <select name="input-cidade" class="input-campo" id="input-cidade" required>
-                        <option value="" disabled selected>- Selecione -</option>
+                    <select name="cadastroCategoriaProduto" class="input-campo" id="cadastroCategoriaProduto" required>
+                        <option value="" selected disabled>- Selecione -</option>
+                        <option value="1">Frutas</option>
+                        <option value="2">Verduras</option>
+                        <option value="3">Legumes</option>
+                        <option value="4">Origem animal</option>
+                        <option value="5">Outro</option>
                     </select>
                 </div>
 
-
-                <div id="campo-telefone">
-                    <label for="input-telefone" class="label-campo" id="label-telefone">Telefone para contato
+                <div class="campo-cadastrar-produto">
+                    <label for="input-quantidade" class="label-campo" id="label-quantidade">Quantidade
                         <strong><span class="asteristico">*</span></strong></label><br>
-                    <input type="number" class="input-campo" id="input-telefone" placeholder="Digite seu telefone . . ."
-                        value="99438-4324" required>
+                    <input type="number" class="input-campo" id="cadastroQuantidadeProduto" required>
+                    <select class="input-campo" id="cadastroTipoQuantidadeProduto" name="cadastroTipoQuantidadeProduto"
+                        required>
+                        <option value="" selected disabled>Nenhum selecionado</option>
+                        <option value="1">Kg</option>
+                        <option value="2">Gramas</option>
+                        <option value="3">Unidades</option>
+                        <option value="4">Litros</option>
+                    </select>
                 </div>
 
-                <button type="submit" class="botao-principal" style="margin-bottom: 25px;">Criar loja</button>
+                <div class="campo-cadastrar-produto">
+                    <label for="input-valor-produto" class="label-campo" id="label-valor-produto">Preço total
+                        <strong><span class="asteristico">*</span></strong></label><br>
+                    R$ <input type="number" class="input-campo" id="cadastroPrecoProduto" placeholder="00.00" required>
+                </div>
+
+                <div class="campo-cadastrar-produto">
+                    <label for="cadastroDescricaoProduto" class="label-campo" id="label-descricao-produto">Descrição
+                        <strong><span class="asteristico">*</span></strong></label><br>
+                    <textarea class="input-campo" name="cadastroDescricaoProduto" id="cadastroDescricaoProduto"
+                        cols="54" rows="3"
+                        placeholder="Informações como estado do produto, dia da coleta, uso de agrotóxicos, etc"
+                        maxlength="150" required></textarea>
+                </div>
+
+                <div class="campo-cadastrar-produto">
+                    <label for="input-quantidade" class="label-campo" id="label-quantidade">Foto <strong><span
+                                class="asteristico">*</span></strong></label><br>
+                    <input type="file" accept="image/png,image/jpeg" class="" name="cadastroFotoProduto"
+                        id="cadastroFotoProduto" required>
+                </div>
+
+            </div>
+
+            <button type="submit" class="botao-principal" id="btn-adc-produto" style="margin-bottom: 25px;">Adicionar
+                produto</button>
 
             </div>
 

@@ -33,13 +33,13 @@ body {
     color: white;
     margin-left: 19px;
 }
+
 .btn-laranja:hover {
     background-color: #c75d00;
-    color: white;    
+    color: white;
 }
 
 /* navbar */
-
 .bg-vinho {
     background-color: var(--vinho);
 }
@@ -48,40 +48,45 @@ body {
     color: var(--branco) !important;
 }
 
+.nav-link {
+    font-size: 20px;
+}
+
 #botaoNavBar {
-    background-color: white;
+    font-size: 18px;
+    background-color: var(--brancoFormulario);
     color: var(--vinho);
     font-weight: bold;
     border: 2px solid var(--vinho);
-    padding: 10px;
+    padding: 8px 10px;
     border-radius: 10px;
     text-align: center;
     margin: 3px 10px 3px 0;
 }
+
 #botaoNavBar:hover {
     background-color: var(--vinho);
-    color:  white;
-    border: 2px solid white;
+    color: var(--brancoFormulario);
+    border: 2px solid var(--brancoFormulario);
 }
 
+.icone-navbar {
+    color: #f0f0f0;
+    font-size: 25px;
+    padding: 5px;
+}
 
-
-
-
-
-
-
-
-
-
+#minha-conta {
+    font-size: 50px;
+    padding: 0 20px 0 5px;
+    color: #ffffff;
+}
 
 
 
 
 /*   FORMULARIOS   */
-
-
-.formulario{
+.formulario {
     background-color: var(--brancoFormulario);
     border-radius: 10px;
     margin: auto;
@@ -93,7 +98,7 @@ body {
 /* botão principal dos fomularios */
 .botao-principal {
     display: block;
-    margin: 25px auto 25px auto;
+    margin: 25px auto 0px auto;
     width: 250px;
     height: 42px;
     border-radius: 300px;
@@ -103,10 +108,12 @@ body {
     color: var(--branco);
     cursor: pointer;
 }
+
 .botao-principal:hover {
     transition-duration: 0.2s;
     background-color: #900505;
 }
+
 /* botão principal dos fomularios */
 
 .input-campo {
@@ -119,10 +126,12 @@ body {
     padding: 0 15px 0 15px;
     margin-top: 5px;
 }
-::placeholder{
+
+::placeholder {
     color: #767575;
     font-size: 15px;
 }
+
 .asteristico {
     font-size: 18px;
     font-weight: bold;
@@ -146,16 +155,18 @@ body {
     font-weight: bold;
     text-decoration: none;
 }
+
 .clique-aqui:hover {
     color: var(--laranja);
 }
 
 .rodape-formulario {
     display: block;
-    margin: 35px auto 35px auto;
+    margin: 35px auto 0 auto;
     color: var(--preto);
-    text-align: center; 
+    text-align: center;
 }
+
 .rodape-formulario a:hover {
     text-decoration: underline;
 }
@@ -167,11 +178,12 @@ body {
 .linhaFormulario {
     background-color: var(--cinza2) !important;
     opacity: 1 !important;
-    height: 1.5px !important; 
+    height: 1.5px !important;
     border: none !important;
     width: 100% !important;
     margin: auto !important;
 }
+
 /* Linha divisoria */
 
 
@@ -195,4 +207,15 @@ body {
 .navbar-brand {
     font-size: 38px;
     letter-spacing: 2px;
+}
+
+
+
+
+#btn-adc-produto {
+    background-color: #198754;
+}
+
+#btn-adc-produto:hover {
+    background-color: #137748;
 }

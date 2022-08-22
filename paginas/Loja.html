@@ -1,96 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Loja</title>
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
     <link rel="stylesheet" href="../css/css-globais.css">
     <link rel="stylesheet" href="../css/loja.css">
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
+        rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    
-  </head>
-  <body id="corpo">
-      <!-- Modal EDITAR -->
-    <div class="modal fade" id="modalEditarProduto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
-                <div class="modal-header">
-                    <i class="bi bi-pencil-square" id="icone-adicionar-produto"></i>
-                    <h5 class="modal-title" id="staticBackdropLabel" style="margin-left: 5px;">Editar informações</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+</head>
 
-                <form action="">
-                    <div class="modal-body">
-
-                        <div style="margin-bottom: 15px;" id="campo-loja">
-                            <label for="input-nome" class="label-campo" id="label-nome">Nome da loja <strong><span class="asteristico">*</span></strong></label>
-                            <input type="text" class="input-campo" id="input-nome" placeholder="Digite o novo nome da loja . . ." value="Loja do Seu Zé" required>
-                        </div>
-        
-                        <div style="margin-bottom: 15px;" id="campo-bairro">
-                            <label for="input-bairro" class="label-campo" id="label-bairro">Bairro <strong><span class="asteristico">*</span></strong></label>
-                            <input type="text" class="input-campo" id="input-bairro" placeholder="Digite o novo bairro . . ." value="Senador Salgado Filho" required>
-                        </div>
-        
-        
-                        <div style="margin-bottom: 15px;" id="campo-endereco">
-                            <label for="input-endereco" class="label-campo" id="label-endereco">Endereço <strong><span class="asteristico">*</span></strong></label><br>
-                            <input type="text" class="input-campo" id="input-endereco" placeholder="Digite a nova rua . . ." value="Av Warner Gomes Fernandes" required>
-                        </div>
-                        <div style="margin-bottom: 15px;" id="campo-numero">
-                            <label for="input-numero" class="label-campo" id="label-numero">Número</label><br>
-                            <input type="number" class="input-campo" id="input-numero" value="20">
-                        </div>
-
-                        <div style="margin-bottom: 15px;" id="campo-estado">
-                            <label for="input-estado" class="label-campo" id="label-estado">Estado <strong><span class="asteristico">*</span></strong></label><br>
-                            <select name="input-estado" class="input-campo" id="input-estado" required>
-                                <option value="" disabled selected>- Selecione -</option>
-                            </select>
-                        </div>
-                        <div style="margin-bottom: 15px;" id="campo-cidade">
-                            <label for="input-cidade" class="label-campo" id="label-cidade">Cidade <strong><span class="asteristico">*</span></strong></label><br>
-                            <select name="input-cidade" class="input-campo" id="input-cidade" required>
-                                <option value="" disabled selected>- Selecione -</option>
-                            </select>
-                        </div>
-
-                        <div id="campo-telefone">
-                            <label for="input-telefone" class="label-campo" id="label-telefone">Telefone para contato <strong><span class="asteristico">*</span></strong></label><br>
-                            <input type="number" class="input-campo" id="input-telefone" placeholder="Digite o novo telefone . . ." value="14994384324" required>
-                        </div>
-
-                        
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-success">Atualizar</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-    </div>
+<body id="corpo">
     <!-- Modal VER PRODUTO -->
-    <div class="modal fade" id="modalVerProduto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="modalVerProduto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
 
                 <div class="modal-header">
                     <i class="bi bi-info-circle"></i>
-                    <h5 class="modal-title" id="staticBackdropLabel" style="margin-left: 5px;">Informações sobre o produto</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel" style="margin-left: 5px;">Informações sobre o
+                        produto</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
 
@@ -101,22 +44,27 @@
                         <div style="background-color: var(--cinza3); padding: 20px;">
                             <div style="margin-bottom: 20px;">
                                 <i class="fa-solid fa-caret-right"></i>
-                                <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Descrição</h5>
-                                <p class="paragrafo-conteudo-card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem,</p>
+                                <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">
+                                    Descrição</h5>
+                                <p class="paragrafo-conteudo-card">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                    elit. Exercitationem,</p>
                             </div>
                             <div style="margin-bottom: 20px;">
                                 <i class="fa-solid fa-caret-right"></i>
-                                <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Categoria</h5>
+                                <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">
+                                    Categoria</h5>
                                 <p class="paragrafo-conteudo-card">Frutas</p>
                             </div>
                             <div style="margin-bottom: 20px;">
                                 <i class="fa-solid fa-caret-right"></i>
-                                <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Quantidade</h5>
+                                <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">
+                                    Quantidade</h5>
                                 <p class="paragrafo-conteudo-card">1 kg</p>
                             </div>
                             <div>
                                 <i class="fa-solid fa-caret-right"></i>
-                                <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Preço</h5>
+                                <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Preço
+                                </h5>
                                 <p class="paragrafo-conteudo-card">R$ 10 por kg</p>
                             </div>
                         </div>
@@ -130,99 +78,41 @@
             </div>
         </div>
     </div>
-    <!-- Modal ADICIONAR PRODUTO -->
-    <div class="modal fade" id="modalAdicionarProduto" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <div class="modal-header">
-                    <i class="bi bi-plus-lg" id="icone-adicionar-produto"></i>
-                    <h5 class="modal-title" id="staticBackdropLabel" style="margin-left: 5px;">Adicionar produto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-
-                <form action="">
-                    <div class="modal-body">
-
-                        <div class="campo-cadastrar-produto">
-                            <label for="cadastroNomeProduto" class="label-campo">Nome <strong><span class="asteristico">*</span></strong></label>
-                            <input type="text" class="input-campo" id="cadastroNomeProduto" name="cadastroNomeProduto" placeholder="Digite o nome do produto . . ." required>
-                        </div>
-
-                        <div class="campo-cadastrar-produto">
-                            <label for="cadastroCategoriaProduto" class="label-campo">Categoria <strong><span class="asteristico">*</span></strong></label>
-                            <select name="cadastroCategoriaProduto" class="input-campo" id="cadastroCategoriaProduto" required>
-                                <option value="" selected disabled>- Selecione -</option>
-                                <option value="1">Frutas</option>
-                                <option value="2">Verduras</option>
-                                <option value="3">Legumes</option>
-                                <option value="4">Origem animal</option>
-                                <option value="5">Outro</option>
-                            </select>
-                        </div>
-
-                        <div class="campo-cadastrar-produto">
-                            <label for="input-quantidade" class="label-campo" id="label-quantidade">Quantidade <strong><span class="asteristico">*</span></strong></label><br>
-                            <input type="number" class="input-campo" id="cadastroQuantidadeProduto" required>
-                            <select class="input-campo" id="cadastroTipoQuantidadeProduto" name="cadastroTipoQuantidadeProduto" required>
-                                <option value="" selected disabled>Nenhum selecionado</option>
-                                <option value="1">Kg</option>
-                                <option value="2">Gramas</option>
-                                <option value="3">Unidades</option>
-                                <option value="4">Litros</option>
-                            </select>
-                        </div>
-
-                        <div class="campo-cadastrar-produto">
-                            <label for="input-valor-produto" class="label-campo" id="label-valor-produto">Preço total <strong><span class="asteristico">*</span></strong></label><br>
-                            R$ <input type="number" class="input-campo" id="cadastroPrecoProduto" placeholder="00.00" required>
-                        </div>
-
-                        <div class="campo-cadastrar-produto">
-                            <label for="cadastroDescricaoProduto" class="label-campo" id="label-descricao-produto">Descrição <strong><span class="asteristico">*</span></strong></label><br>
-                            <textarea class="input-campo" name="cadastroDescricaoProduto" id="cadastroDescricaoProduto" cols="54" rows="3" placeholder="Informações como estado do produto, dia da coleta, uso de agrotóxicos, etc" maxlength="150" required></textarea>
-                        </div>
-
-                        <div class="campo-cadastrar-produto">
-                            <label for="input-quantidade" class="label-campo" id="label-quantidade">Foto <strong><span class="asteristico">*</span></strong></label><br>
-                            <input type="file" accept="image/png,image/jpeg" class="" name="cadastroFotoProduto" id="cadastroFotoProduto" required>
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-success">Cadastrar</button>
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                    </div>
-                </form>
-
-            </div>
-        </div>
-    </div>
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-vinho">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="logo.png" alt="" width="60" height="48" class="d-inline-block align-text-top">
-                    CERES
+
+                <a class="navbar-brand" href="Home.html">
+                    <img src="img/logo.png" alt="" width="60" height="48" class="d-inline-block align-text-top">CERES
                 </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+                            <a class="nav-link" aria-current="page" href="Home.html" title="Ir à Home">
+                                <i class="bi bi-house-door-fill icone-navbar"></i>Home
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Criar-loja.html">Criar loja</a>
+                            <a class="nav-link" href="Criar-loja.html" title="Ir à Criar loja">
+                                <i class="bi bi-bag-plus-fill icone-navbar"></i>Criar loja
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Loja.html">Minha loja</a>
+                            <a class="nav-link" href="Loja.html" title="Ir à Minha loja">
+                                <i class="bi bi-cart-fill icone-navbar"></i>Minha loja
+                            </a>
                         </li>
                     </ul>
-                    <div class="d-flex">
+
+                    <!-- SEM CONTA LOGADA -->
+                    <!-- <div class="d-flex">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
                                 <a class="nav-link active" id="botaoNavBar" href="Cadastro.html">CADASTRAR</a>
@@ -231,33 +121,50 @@
                                 <a class="nav-link active" id="botaoNavBar" href="Login.html">LOGAR</a>
                             </li>
                         </ul>
+                    </div> -->
+
+                    <!-- COM CONTA LOGADA -->
+                    <div class="d-flex">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="" id="" href="Meu-perfil.html" title="Meu perfil">
+                                    <i class="bi bi-person-circle" id="minha-conta"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+
             </div>
         </nav>
     </header>
 
     <main>
 
-        <div id="container-titulo-loja"> <!-- titulo loja -->
+        <div id="container-titulo-loja">
+            <!-- titulo loja -->
             <div id="linha-vertical1"></div>
             <div id="linha-vertical2"></div>
             <h1 id="titulo-loja">Loja do Seu Zé</h1>
         </div>
 
-        <div id="sessoes"> <!-- sessoes loja -->
+        <div id="sessoes">
+            <!-- sessoes loja -->
 
-            <section class="quadrado-branco" id="informacoes"> <!-- section informações -->
+            <section class="quadrado-branco" id="informacoes">
+                <!-- section informações -->
                 <div class="conteudo">
 
                     <div id="div-titulo-sessao">
                         <i class="bi bi-info-square-fill"></i>
                         <h2 class="titulo-sessao">INFORMAÇÕES</h2>
                     </div>
-                    <div id="adicionar-produto" data-bs-toggle="modal" data-bs-target="#modalEditarProduto">
-                        <i class="bi bi-pencil-square" id="icone-adicionar-produto"></i> Editar
-                    </div>
-                    
+                    <a href="Editar-loja.html" target="_blank">
+                        <div id="adicionar-produto" data-bs-toggle="modal" data-bs-target="#modalEditarProduto">
+                            <i class="bi bi-pencil-square" id="icone-adicionar-produto"></i> Editar
+                        </div>
+                    </a>
+
                     <div id="div-conteudo-informacoes">
                         <div class="item-paragrafro" title="Telefone para contato">
                             <i class="bi bi-telephone-fill"></i>
@@ -266,7 +173,8 @@
                         <div class="item-paragrafro" title="localização da loja">
                             <i class="bi bi-geo-alt-fill"></i>
                             <p class="p-informacao"><strong>Bairro:</strong> Senador Salgado Filho</p><br>
-                            <p class="p-informacao" style="margin-left: 25.5px;"><strong>Rua:</strong> Av Warner Gomes Fernandes</p><br>
+                            <p class="p-informacao" style="margin-left: 25.5px;"><strong>Rua:</strong> Av Warner Gomes
+                                Fernandes</p><br>
                             <p class="p-informacao" style="margin-left: 25.5px;"><strong>Número:</strong> 20</p><br>
                         </div><br>
                         <div class="item-paragrafro" title="Cidade/Estado">
@@ -277,72 +185,93 @@
                 </div>
             </section>
 
-            <section class="quadrado-branco" id="produtos"> 
+            <section class="quadrado-branco" id="produtos">
                 <div class="conteudo">
 
                     <div id="div-titulo-sessao">
                         <i class="bi bi-basket3-fill"></i>
                         <h2 class="titulo-sessao">PRODUTOS</h2>
                     </div>
-                    <div id="adicionar-produto" data-bs-toggle="modal" data-bs-target="#modalAdicionarProduto">
-                        <i class="bi bi-plus-lg" id="icone-adicionar-produto"></i> Adicionar
-                    </div>
+                    <a href="Adicionar-produto.html" target="_blank">
+                        <div id="adicionar-produto">
+                            <i class="bi bi-plus-lg" id="icone-adicionar-produto"></i> Adicionar
+                        </div>
+                    </a>
 
                     <div class="container-itens-scroll">
                         <div class="scroll-horizontal">
-                            <button class="botao" id="botaoEsquerdo" onclick="scrollHorizontal(1)"><i class="bi bi-chevron-left" id="arrow"></i></button>
-                            <button class="botao" id="botaoDireito" onclick="scrollHorizontal(-1)"><i class="bi bi-chevron-right" id="arrow"></i></button>
+                            <button class="botao" id="botaoEsquerdo" onclick="scrollHorizontal(1)"><i
+                                    class="bi bi-chevron-left" id="arrow"></i></button>
+                            <button class="botao" id="botaoDireito" onclick="scrollHorizontal(-1)"><i
+                                    class="bi bi-chevron-right" id="arrow"></i></button>
                             <div id="cards-container">
                                 <div class="card" style="width: 11rem;">
-                                    <div class="card-img-top" id="img1"><i class="bi bi-trash3-fill" id="icone-deletar-produto"></i></div>
+                                    <div class="card-img-top" id="img1"><i class="bi bi-trash3-fill"
+                                            id="icone-deletar-produto"></i></div>
                                     <div class="card-body">
                                         <h5 class="card-title">Maça</h5>
                                         <p class="card-text" style="margin-bottom: 0;">10 unidades</p>
                                         <p class="card-text">R$ 19,90</p>
-                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal" data-bs-target="#modalVerProduto">Ver produto</button>
+                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal"
+                                            data-bs-target="#modalVerProduto">Ver produto</button>
                                     </div>
                                 </div>
                                 <div class="card" style="width: 11rem;">
-                                    <div class="card-img-top" id="img2"><i class="bi bi-trash3-fill" id="icone-deletar-produto"></i></div>
+                                    <div class="card-img-top" id="img2"><i class="bi bi-trash3-fill"
+                                            id="icone-deletar-produto"></i></div>
                                     <div class="card-body">
                                         <h5 class="card-title">Melancia</h5>
                                         <p class="card-text" style="margin-bottom: 0;">3 unidades</p>
                                         <p class="card-text">R$ 35,90</p>
-                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal" data-bs-target="#modalVerProduto">Ver produto</button>                                    </div>
+                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal"
+                                            data-bs-target="#modalVerProduto">Ver produto</button>
+                                    </div>
                                 </div>
                                 <div class="card" style="width: 11rem;">
-                                    <div class="card-img-top" id="img3"><i class="bi bi-trash3-fill" id="icone-deletar-produto"></i></div>
+                                    <div class="card-img-top" id="img3"><i class="bi bi-trash3-fill"
+                                            id="icone-deletar-produto"></i></div>
                                     <div class="card-body">
                                         <h5 class="card-title">Melancia </h5>
                                         <p class="card-text" style="margin-bottom: 0;">5 kg</p>
                                         <p class="card-text">R$ 12,90</p>
-                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal" data-bs-target="#modalVerProduto">Ver produto</button>                                    </div>
+                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal"
+                                            data-bs-target="#modalVerProduto">Ver produto</button>
+                                    </div>
                                 </div>
                                 <div class="card" style="width: 11rem;">
-                                    <div class="card-img-top" id="img4"><i class="bi bi-trash3-fill" id="icone-deletar-produto"></i></div>
+                                    <div class="card-img-top" id="img4"><i class="bi bi-trash3-fill"
+                                            id="icone-deletar-produto"></i></div>
                                     <div class="card-body">
                                         <h5 class="card-title">Uva</h5>
                                         <p class="card-text" style="margin-bottom: 0;">8 kg</p>
                                         <p class="card-text">R$ 25,90</p>
-                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal" data-bs-target="#modalVerProduto">Ver produto</button>                                    </div>
+                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal"
+                                            data-bs-target="#modalVerProduto">Ver produto</button>
+                                    </div>
                                 </div>
                                 <div class="card" style="width: 11rem;">
-                                    <div class="card-img-top" id="img4"><i class="bi bi-trash3-fill" id="icone-deletar-produto"></i></div>
+                                    <div class="card-img-top" id="img4"><i class="bi bi-trash3-fill"
+                                            id="icone-deletar-produto"></i></div>
                                     <div class="card-body">
                                         <h5 class="card-title">Uva</h5>
                                         <p class="card-text" style="margin-bottom: 0;">4 unidades</p>
                                         <p class="card-text">R$ 10</p>
-                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal" data-bs-target="#modalVerProduto">Ver produto</button>                                    </div>
+                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal"
+                                            data-bs-target="#modalVerProduto">Ver produto</button>
+                                    </div>
                                 </div>
                                 <div class="card" style="width: 11rem;">
-                                    <div class="card-img-top" id="img4"><i class="bi bi-trash3-fill" id="icone-deletar-produto"></i></div>
+                                    <div class="card-img-top" id="img4"><i class="bi bi-trash3-fill"
+                                            id="icone-deletar-produto"></i></div>
                                     <div class="card-body">
                                         <h5 class="card-title">Uva</h5>
                                         <p class="card-text" style="margin-bottom: 0;">20 unidades</p>
                                         <p class="card-text">R$ 9,90</p>
-                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal" data-bs-target="#modalVerProduto">Ver produto</button>                                    </div>
+                                        <button type="button" class="btn btn-laranja" data-bs-toggle="modal"
+                                            data-bs-target="#modalVerProduto">Ver produto</button>
+                                    </div>
                                 </div>
-                                
+
                             </div>
                         </div>
 
@@ -364,7 +293,8 @@
 
     </main>
 
-      <script src="../js/loja.js"></script>
-      <script src="../js/criar-loja.js"></script>
-  </body>
+    <script src="../js/loja.js"></script>
+    <script src="../js/criar-loja.js"></script>
+</body>
+
 </html>

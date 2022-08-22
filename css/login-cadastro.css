@@ -3,9 +3,10 @@
     height: 635px;
     margin-bottom: 30px;
 }
+
 #formularioCadastro {
-    width: 395px;
-    height: 820px;
+    width: 390px;
+    height: auto;
     margin-bottom: 20px;
 }
 
@@ -17,4 +18,13 @@
     margin: auto;
     border-radius: 500px;
     margin-bottom: 35px;
+}
+
+
+#btn-att-infos {
+    background-color: #198754;
+}
+
+#btn-att-infos:hover {
+    background-color: #0e7444;
 }

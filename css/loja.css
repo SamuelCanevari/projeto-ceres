@@ -2,25 +2,44 @@
     display: inline-block;
     width: 82%;
 }
+
 #campo-numero {
     display: inline-block;
     width: 65px;
 }
-#campo-estado {display: inline-block; width: 43%;}
-#campo-cidade {display: inline-block; width: 55%;}
-#campo-telefone {display: inline-block; }
+
+#campo-estado {
+    display: inline-block;
+    width: 43%;
+}
+
+#campo-cidade {
+    display: inline-block;
+    width: 55%;
+}
+
+#campo-telefone {
+    display: inline-block;
+}
 
 
-#input-nome, #input-bairro, #input-endereco, #input-numero, #input-estado, #input-cidade, #input-telefone {
+#input-nome,
+#input-bairro,
+#input-endereco,
+#input-numero,
+#input-estado,
+#input-cidade,
+#input-telefone {
     width: 100%;
 }
+
 #input-numero::-webkit-outer-spin-button,
 #input-numero::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-::placeholder{
+::placeholder {
     color: var(--cinza1);
     font-size: 16px;
 }
@@ -31,6 +50,7 @@
     width: 100%;
     height: auto;
 }
+
 #cadastroFotoProduto {
     width: 100%;
 }
@@ -45,33 +65,41 @@
     height: 70px;
     background-color: var(--laranja);
     border: 3px solid var(--preto);
-    border-bottom:none;
+    border-bottom: none;
     border-top: none;
     margin: 80px auto 0 auto;
     box-shadow: -4px 4px 6px rgba(0, 0, 0, 0.297);
     border-radius: 0 0 5px 5px;
 }
-#linha-vertical1, #linha-vertical2 {
+
+#linha-vertical1,
+#linha-vertical2 {
     height: 80px;
     border-right: 3px solid var(--preto);
     position: absolute;
     bottom: 100%;
     left: -3px;
 }
-#linha-vertical2 { left: 464px}
+
+#linha-vertical2 {
+    left: 464px
+}
+
 #titulo-loja {
     color: var(--branco);
     font-size: 34px;
     width: 100%;
     text-align: center;
-    
+
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
-#sessoes { margin-top: 120px; }
+#sessoes {
+    margin-top: 120px;
+}
 
 .quadrado-branco {
     background-color: var(--branco);
@@ -83,14 +111,17 @@
     border-radius: 10px;
     box-shadow: -4px 4px 5px rgba(0, 0, 0, 0.342);
 }
-#div-titulo-sessao{
+
+#div-titulo-sessao {
     display: inline-block;
     /* border: 2px solid var(--vinho); */
 }
+
 #div-titulo-sessao i {
     font-size: 2em;
     color: var(--preto);
 }
+
 .titulo-sessao {
     /* background-color: var(--vinho); */
     padding: 2px 5px 2px 5px;
@@ -108,17 +139,22 @@
 .campo-cadastrar-produto {
     margin-bottom: 15px;
 }
-#cadastroNomeProduto, #cadastroCategoriaProduto {
+
+#cadastroNomeProduto,
+#cadastroCategoriaProduto {
     width: 100%;
 }
+
 #cadastroQuantidadeProduto {
     display: inline-block;
     width: 100px;
 }
+
 #cadastroTipoQuantidadeProduto {
     display: inline-block;
     width: 230px;
 }
+
 #cadastroPrecoProduto {
     display: inline-block;
     width: 120px;
@@ -128,8 +164,7 @@
 
 
 
-.modal-body {
-}
+.modal-body {}
 
 .imagem-card {
     width: 300px;
@@ -137,9 +172,11 @@
 
     margin-left: 83px;
 }
+
 .titulo-card-produto {
     /* display: inline-block; */
 }
+
 .conteudo-imagem-card {
     display: inline-block;
     height: 100px;
@@ -151,7 +188,8 @@
 .titulo-conteudo-card {
     margin-bottom: 5px;
 }
-.paragrafo-conteudo-card{
+
+.paragrafo-conteudo-card {
     margin-left: 10px;
     margin-bottom: 0px;
 }
@@ -161,12 +199,14 @@
 #div-conteudo-informacoes {
     margin: 15px 0 0 30px;
 }
+
 .p-informacao {
     display: inline-block;
     font-size: 16px;
     margin-bottom: 3px;
     margin-left: 5px;
 }
+
 .item-paragrafro {
     margin-top: 10px;
     display: inline-block;
@@ -176,36 +216,46 @@
 
 
 
-#produtos { height: 500px; }
-#chat { height: 800px; max-width: 700px;}
+#produtos {
+    height: 500px;
+}
+
+#chat {
+    height: 800px;
+    max-width: 700px;
+}
 
 .conteudo {
     position: relative;
 }
+
 #adicionar-produto {
     position: absolute;
-    border: 1px solid var(--preto);
+    border: 1px solid var(--branco);
     display: inline-block;
     padding: 3px 10px 3px 10px;
-    border-radius: 5px;
+    border-radius: 6px;
     right: 0%;
-    color: var(--preto);
-    background-color: var(--branco);
-    cursor: pointer;
-}
-#icone-adicionar-produto {
-    color: var(--preto);
-}
-#adicionar-produto:hover {
     color: var(--branco);
     background-color: var(--preto);
+    cursor: pointer;
 }
-#adicionar-produto:hover #icone-adicionar-produto {
+
+#adicionar-produto:hover {
+    color: var(--preto);
+    background-color: var(--branco);
+    border: 1px solid var(--preto);
+}
+
+#icone-adicionar-produto {
     color: var(--branco);
 }
 
-.btn-outline-danger {
+#adicionar-produto:hover #icone-adicionar-produto {
+    color: var(--preto);
 }
+
+.btn-outline-danger {}
 
 
 
@@ -214,8 +264,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
+
 .scroll-horizontal {
     width: 910px;
     height: 400px;
@@ -225,8 +276,9 @@
     align-items: center;
     position: relative;
     overflow: hidden;
-    
+
 }
+
 #cards-container {
     display: flex;
     flex-direction: row;
@@ -236,6 +288,7 @@
     left: 0px;
     transition: 0.5s all ease-out;
 }
+
 #icone-deletar-produto {
     font-size: 1.3em;
     cursor: pointer;
@@ -244,17 +297,21 @@
     padding: 8px 13px;
     border-radius: 100px;
 }
+
 .card-body {
     padding: 10px 0 16px 0;
 }
+
 .card-title {
     width: 160px;
     text-align: center;
 }
+
 .card-text {
     text-align: center;
 }
-.card{
+
+.card {
     max-width: 174px;
     max-height: 300px;
     position: relative;
@@ -265,6 +322,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .card-img-top {
     width: 174px;
     height: 140px;
@@ -272,16 +330,20 @@
     background-repeat: no-repeat;
     background-position: center center;
 }
-#img1{
+
+#img1 {
     background-image: url(../paginas/imagens/maca.jpg);
 }
-#img2{
+
+#img2 {
     background-image: url(../paginas/imagens/melancia.jpg);
 }
-#img3{
+
+#img3 {
     background-image: url(../paginas/imagens/pera.jpg);
 }
-#img4{
+
+#img4 {
     background-image: url(../paginas/imagens/uva.webp);
 }
 
@@ -303,6 +365,7 @@
     margin: 0px 5px;
     z-index: 1;
 }
+
 #arrow {
     font-size: 1.5em;
     position: absolute;
@@ -311,6 +374,3 @@
     transform: translate(-50%, -50%);
     color: var(--vinho);
 }
-
-
-

@@ -1,6 +1,6 @@
 #formularioCriarLoja {
     width: 460px;
-    height: 750px;
+    height: auto;
     margin-bottom: 20px;
 }
 
@@ -9,27 +9,44 @@
     display: inline-block;
     width: 82%;
 }
+
 #campo-numero {
     display: inline-block;
     width: 65px;
 }
-#campo-estado {display: inline-block; width: 43%;}
-#campo-cidade {display: inline-block; width: 55%;}
-#campo-telefone {display: inline-block; }
+
+#campo-estado {
+    display: inline-block;
+    width: 43%;
+}
+
+#campo-cidade {
+    display: inline-block;
+    width: 55%;
+}
+
+#campo-telefone {
+    display: inline-block;
+}
 
 
-#input-nome, #input-bairro, #input-endereco, #input-numero, #input-estado, #input-cidade, #input-telefone {
+#input-nome,
+#input-bairro,
+#input-endereco,
+#input-numero,
+#input-estado,
+#input-cidade,
+#input-telefone {
     width: 100%;
 }
+
 #input-numero::-webkit-outer-spin-button,
 #input-numero::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-::placeholder{
+::placeholder {
     color: var(--cinza1);
     font-size: 16px;
 }
-
-
