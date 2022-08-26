@@ -28,3 +28,12 @@
 #btn-att-infos:hover {
     background-color: #0e7444;
 }
+
+#btn-editar-conta {
+    background-color: #198754;
+    margin-bottom: 0 !important;
+}
+
+#btn-editar-conta:hover {
+    background-color: #0e7444;
+}

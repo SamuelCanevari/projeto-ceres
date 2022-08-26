@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
         rel="stylesheet" />
 
-    <title>Adicionar produto</title>
+    <title>Ver Produto</title>
 </head>
 
 <body id="corpo">
@@ -85,80 +85,47 @@
     </header>
 
     <main>
-        <form action="Loja.html" class="formulario" id="formularioCriarLoja" name="formulario">
+        <form action="" class="formulario" id="formularioCriarLoja" name="formulario">
             <div id="conteudo">
-
-                <h1 class="titulo">Adicionar produto</h1>
-
-                <div style="margin-bottom: 15px;" id="campo-loja">
-                    <label for="input-nome" class="label-campo" id="label-nome">Nome do produto <strong><span
-                                class="asteristico">*</span></strong></label>
-                    <input type="text" class="input-campo" id="cadastroNomeProduto" name="cadastroNomeProduto"
-                        placeholder="Digite o nome do produto . . ." required>
-                </div>
-
-                <div class="campo-cadastrar-produto">
-                    <label for="cadastroCategoriaProduto" class="label-campo">Categoria <strong><span
-                                class="asteristico">*</span></strong></label>
-                    <select name="cadastroCategoriaProduto" class="input-campo" id="cadastroCategoriaProduto" required>
-                        <option value="" selected disabled>- Selecione -</option>
-                        <option value="1">Frutas</option>
-                        <option value="2">Verduras</option>
-                        <option value="3">Legumes</option>
-                        <option value="4">Origem animal</option>
-                        <option value="5">Outro</option>
-                    </select>
-                </div>
-
-                <div class="campo-cadastrar-produto">
-                    <label for="input-quantidade" class="label-campo" id="label-quantidade">Quantidade
-                        <strong><span class="asteristico">*</span></strong></label><br>
-                    <input type="number" class="input-campo" id="cadastroQuantidadeProduto" required>
-                    <select class="input-campo" id="cadastroTipoQuantidadeProduto" name="cadastroTipoQuantidadeProduto"
-                        required>
-                        <option value="" selected disabled>Nenhum selecionado</option>
-                        <option value="1">Kg</option>
-                        <option value="2">Gramas</option>
-                        <option value="3">Unidades</option>
-                        <option value="4">Litros</option>
-                    </select>
-                </div>
-
-                <div class="campo-cadastrar-produto">
-                    <label for="input-valor-produto" class="label-campo" id="label-valor-produto">Preço total
-                        <strong><span class="asteristico">*</span></strong></label><br>
-                    R$ <input type="number" class="input-campo" id="cadastroPrecoProduto" placeholder="00.00" required>
-                </div>
-
-                <div class="campo-cadastrar-produto">
-                    <label for="cadastroDescricaoProduto" class="label-campo" id="label-descricao-produto">Descrição
-                        <strong><span class="asteristico">*</span></strong></label><br>
-                    <textarea class="input-campo" name="cadastroDescricaoProduto" id="cadastroDescricaoProduto"
-                        cols="54" rows="3"
-                        placeholder="Informações como estado do produto, dia da coleta, uso de agrotóxicos, etc"
-                        maxlength="150" required></textarea>
-                </div>
-
-                <div class="campo-cadastrar-produto">
-                    <label for="input-quantidade" class="label-campo" id="label-quantidade">Foto <strong><span
-                                class="asteristico">*</span></strong></label><br>
-                    <input type="file" accept="image/png,image/jpeg" class="" name="cadastroFotoProduto"
-                        id="cadastroFotoProduto" required>
+                <h1 class="titulo">Informações sobre o produto</h1>
+                <div style="border: 2px solid var(--cinza2); padding: 15px; border-radius: 10px; margin-top: 15px;">
+                    <img src="imagens/maca.jpg" class="imagem-card" alt="...">
+                    <h3>Maçã fuji organica</h3>
+                    <div style="background-color: var(--cinza3); padding: 20px;">
+                        <div style="margin-bottom: 20px;">
+                            <i class="bi bi-journal-text"></i>
+                            <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">
+                                Descrição</h5>
+                            <p class="paragrafo-conteudo-card">Lorem, ipsum dolor sit amet consectetur adipisicing
+                                elit. Exercitationem,</p>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <i class="bi bi-tags"></i>
+                            <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">
+                                Categoria</h5>
+                            <p class="paragrafo-conteudo-card">Frutas</p>
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <i class="bi bi-boxes"></i>
+                            <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">
+                                Quantidade</h5>
+                            <p class="paragrafo-conteudo-card">1 kg</p>
+                        </div>
+                        <div>
+                            <i class="bi bi-currency-dollar"></i>
+                            <h5 class="titulo-conteudo-card" style="display: inline-block; margin-left: 3px;">Preço
+                            </h5>
+                            <p class="paragrafo-conteudo-card">R$ 10 por kg</p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
 
-            <button type="submit" class="botao-principal" id="btn-adc-produto" style="margin-bottom: 25px;">
-                Adicionar produto
-            </button>
-            <button type="submit" id="btn-adc-produto2" style="margin-bottom: 25px;">
-                Adicionar e continuar adicionando
-            </button>
-
-            <hr class="linhaFormulario">
-
             <div class="rodape-formulario">
-                <p><strong><a href="Home.html" class="clique-aqui">Voltar à pagina principal</a></strong></p>
+                <p style="margin-bottom: 0;">
+                    <strong><a href="Loja.html" class="clique-aqui">Voltar</a></strong>
+                </p>
             </div>
 
         </form>

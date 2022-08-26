@@ -90,7 +90,7 @@
     font-size: 34px;
     width: 100%;
     text-align: center;
-
+    text-transform: uppercase;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -98,7 +98,7 @@
 }
 
 #sessoes {
-    margin-top: 120px;
+    margin-top: 80px;
 }
 
 .quadrado-branco {
@@ -308,7 +308,8 @@
 }
 
 .card-text {
-    text-align: center;
+    text-align: left;
+    padding: 0 20px;
 }
 
 .card {
@@ -373,4 +374,24 @@
     top: 50%;
     transform: translate(-50%, -50%);
     color: var(--vinho);
+}
+
+#btn-adc-produto2 {
+    display: block;
+    margin: 25px auto 0px auto;
+    width: 250px;
+    height: auto;
+    border-radius: 300px;
+    font-size: 18px;
+    border: none;
+    background-color: var(--vinho);
+    color: var(--branco);
+    cursor: pointer;
+    background-color: #198754;
+    padding: 8px 0;
+}
+
+#btn-adc-produto2:hover {
+    transition-duration: 0.2s;
+    background-color: #137748;
 }
