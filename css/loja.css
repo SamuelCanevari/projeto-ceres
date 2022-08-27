@@ -164,13 +164,12 @@
 
 
 
-.modal-body {}
 
 .imagem-card {
-    width: 300px;
-    height: 300px;
-
-    margin-left: 83px;
+    width: 350px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 30px;
 }
 
 .titulo-card-produto {
@@ -221,7 +220,7 @@
 }
 
 #chat {
-    height: 800px;
+    height: auto;
     max-width: 700px;
 }
 
@@ -394,4 +393,22 @@
 #btn-adc-produto2:hover {
     transition-duration: 0.2s;
     background-color: #137748;
+}
+
+#btn-chat {
+    margin: 30px 0;
+    text-decoration: none;
+    border: 1px solid var(--branco);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: var(--branco);
+    background-color: var(--preto);
+    cursor: pointer;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+#btn-chat:hover {
+    background-color: #151515e7;
 }
