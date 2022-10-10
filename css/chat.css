@@ -90,7 +90,7 @@ body {
 }
 
 .message-container.message-mine {
-    background-color: #7a1f1fec;
+    background-color: #7a1f1f;
     align-self: flex-end;
     word-break: normal;
     margin-left: 70px;
